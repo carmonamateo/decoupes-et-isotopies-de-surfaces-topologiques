@@ -1,0 +1,422 @@
+%Begin
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{\S \space I. --- CATÉGORIES DE 1-COMPLEXES}
+\addcontentsline{toc}{section}{I. Catégorie de 1-complexes}
+\section*{}
+
+Dans ce chapitre on fixe la terminologie utilisée pour les 1-complexes et on établit un certain nombre de propriétés les concernant. Dans les paragraphes précédés d'une astérisque on effectue des constructions qu'on n'utilisera qu'au chapitre VI, et qu'on conseille au lecteur de sauter en première lecture.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{1. Catégorie isotopique $\Kt$ des 1-complexes topologiques compacts.}
+\addcontentsline{toc}{subsection}{1. Catégorie isotopique $\Kt$ des 1-complexes topologiques compacts}
+
+{\bf 1.1}. --- 1.1. On appellera \emph{étoile standard} à $n$ branches (où $n$ est un entier strictement positif) la partie $\St_n$ de $\mathbf{R}^2$ définie en coordonnées polaires par~: 
+$$
+\St_n = \{(\rho, \theta),\; 0 \le \rho < 1, \quad \theta = \frac{2k\pi}{n},\; k \in \mathbf{Z}\}
+$$ 
+On conviendra d'appeler étoile à zéro branches la partie de $\mathbf{R}^2$ réduite à l'origine. 
+
+Plus généralement on appellera \emph{étoile} tout espace topologique homéomorphe à une étoile standard. Le nombre de branches d'une étoile est un invariant topologique (on vérifie en effet immédiatement que si $n \neq m$, alors $\St_n$ et $\St_m$ ne sont pas homéomorphes~: l'espace obtenu à partir de $\St_n$ (resp. $\St_m$) en supprimant l'origine comportant $n$ (resp. $m$) composantes connexes). 
+
+\vskip .3cm
+{\bf 1.2}. --- Un \emph{1-complexe topologique compact} $K$ est un couple $(E,S)$, où $E$ est un espace topologique compact dont tout point possède un voisinage qui est une étoile~; si cette étoile possède $n$ branches, $n$ sera appelé le \emph{degré} du point considéré~; si ce degré est différent de 2, ce point sera appelé \emph{sommet topologique} de $K$. Quant à $S$ c'est une partie finie de $E$ contenant l'ensemble (fini, vu l'hypothèse de compacité) des sommets topologiques de $K$. Les points de $S$ seront appelés les \emph{sommets} de $K$. 
+
+Il résulte des définitions que tout sommet qui n'est pas sommet topologique possède un voisinage homéomorphe au segment $]0,1[$ de $\mathbf{R}$. Un point de degré zéro sera dit \emph{sommet isolé}. 
+
+Nous appellerons \emph{arête} de $K$ toute composante connexe de $E \setminus S$~; par compacité il n'y a qu'un nombre fini d'arêtes dans $K$. Si une arête est homéomorphe à la sphère $S^1$ de dimension 1 (espace topologique des nombres complexes de module 1) on l'appellerera \emph{boucle isolée}~; si cela n'est pas le cas alors l'arête considérée est homéomorphe à $]0,1[$ (en effet toute arête est une variété paracompacte connexe de dimension 1). 
+
+Nous appellerons \emph{arcs} de $K$ les variétés topologiques orientées à bord (éventuellement vide), définies de la manière suivante~: 
+\begin{itemize}
+    \item[1$^\circ$)] à toute arête boucle isolée sont associés deux arcs ayant le même espace sous jacent (à savoir~: la boucle), et chacun d'eux ayant l'une des deux orientations possibles de cette boucle. De tels arcs seront dits \emph{arcs sans source}, ou \emph{arcs boucle isolée} par opposition à ceux qu'on va définir maintenant~:
+    \item[2$^\circ$)] pour toute arête $\alpha$ qui n'est pas boucle isolée, on construit deux arcs distincts en considérant le compactifié $\tilde{\alpha}$ de $\alpha$ par deux points extrémités et en munissant respectivement cette variété à bord des deux orientations possibles.
+\end{itemize}
+Pour un arc de ce type on distingue sa \emph{source} $\tilde{s}(a)$ et son \emph{but} $\tilde{b}(a)$ qui sont les deux points images réciproques de $0$ et de $1$ (respectivement), dans tout homéomorphisme orienté de $a$ avec $[0,1]$ muni de l'orientation standard. 
+
+À \emph{tout} arc $a$ est associé l'arc \emph{inverse} $\sigma(a)$ qui a même espace sous-jacent que $a$, mais l'orientation inverse. Il existe un homéomorphisme canonique $\tau_a$, non orienté, entre $a$ et $\sigma(a)$, (induit par l'identité de l'espace sous-jacent), mais ne pas oublier que $a$ et $\sigma(a)$ sont deux espaces différents~: c'est ainsi que $\tilde{s}(a)$ et $\tilde{b}(\sigma(a))$ sont deux points distincts~: l'un est dans $a$, l'autre dans $\sigma(a)$, aucun n'est un point de $K$. 
+
+L'injection canonique d'une arête $\alpha$ qui n'est pas boucle isolée se prolonge canoniquement en une application $p_a$ continue de tout arc $a$ correspondant à $\alpha$ dans $K$~; on notera~: $s(a)$ (resp~: $b(a)$) l'image de $\tilde{s}(a)$ (resp.~: de $\tilde{b}(a)$). Les points $s(a)$ et $b(a)$ sont deux points de $K$, on a~: $s(a) = b(\sigma(a))$ et $b(a) = s(\sigma(a))$. $s(a)$ sera appelé \emph{source dans $K$}, $b(a)$~: \emph{but dans $K$} de $a$ (il peut arriver que $s(a)$ soit égal à $b(a)$). 
+
+N.B. Il nous arrivera souvent, pour simplifier les notations, de confondre $K$ avec l'espace sous-jacent.
+
+\vskip .3cm
+{\bf 1.3}. --- Étant donné deux 1-complexes $K, K'$ ($K = (E, S)$, $K' = (E', S')$), nous appellerons isomorphisme de 1-complexes tout homéomorphisme $h$ de $E$ dans $E'$ tel que $h(S) = S'$. L'espace de ces isomorphismes sera noté $\operatorname{Isom}(K, K')$ (ou $\Aut K$ si $K = K'$), il sera toujours muni de la topologie ``compacts-ouverts'' qui coïncide ici avec la topologie de la convergence uniforme lorsqu'on munit $K'$ d'une distance définissant sa topologie.
+
+La \emph{catégorie $\KT$ des 1-complexes topologiques} (compacts) est (par définition) la catégorie ayant pour objets les 1-complexes topologiques compacts, et pour morphismes les isomorphismes de 1-complexes.
+
+La \emph{catégorie isotopique des 1-complexes} (topologiques compacts) est (par définition) la catégorie $\Kt$ ayant les mêmes objets que $\KT$, et pour flèches entre deux objets $K$ et $K'$ les éléments de~:
+$$
+\Hom_{\Kt}(K, K') = \pi_0 \operatorname{Isom}(K, K').
+$$
+\vskip .3cm
+{\bf 1.4}. --- Étant donné un 1-complexe $K$, notons $A$ l'ensemble de ses arcs, $S$ l'ensemble de ses sommets~; $A$ est muni d'une involution sans point fixe $\sigma$, qui à tout arc $a$ associe son inverse $\sigma(a)$. On dispose aussi d'une application \emph{source} $s$ de $A \setminus B$ (où $B$ est l'ensemble des arcs boucle isolées), dans $S$ qui, à tout arc $a$ de $A \setminus B$, associe sa source $s(a)$ dans $K$.
+
+Soit $K'$ un second 1-complexe, $A'$ l'ensemble de ses arcs et $S'$ l'ensemble de ses sommets~; alors~: tout isomorphisme $h$ de $K$ sur $K'$ induit une bijection $A(h)$ entre $A$ et $A'$ et une bijection $S(h)$ entre $S$ et $S'$ (Vérification immédiate). De plus si $h'$ est un second isomorphisme de $K'$ sur un troisième 1-complexe $K''$ on a~:
+$$
+S(h' \circ h) = S(h') \circ S(h), \quad A(h' \circ h) = A(h') \circ A(h).
+$$
+\vskip .3cm
+{
+Proposition {\bf 1.5}. --- \it Soit $K$ un 1-complexe, $A$ l'ensemble de ses arcs, $S$ l'ensemble de ses sommets. Soit $h$ un automorphisme de $K$ ($h \in \Aut K$). Alors, $h$ isotope à l'identité dans $\Aut K$ si et seulement si $A(h)$ est l'identité de $A$ et $S(h)$ est l'identité de $S$. (On dit que deux éléments $g$ et $h$ de $\Aut K$ sont isotopes si et seulement s'il existe une application continue $\gamma : [0, 1] \to \Aut K$ telle que $\gamma(0) = g$ et $\gamma(1) = h$~: cela signifie que $g$ et $h$ sont dans la même composante connexe par arcs de $\Aut K$).
+}
+\vskip .3cm
+Pour démontrer cette proposition nous aurons besoin des lemmes suivants (ici et partout dans la suite on entend par homéomorphisme \emph{orienté} un homéomorphisme conservant l'orientation)~:
+\vskip .3cm
+{
+Lemme {\bf 1.5.1}. --- \it
+\begin{itemize}
+    \item[a)] Tout homéomorphisme orienté de $]0, 1[$ ou de $\mathbb{S}^1$ est isotope à l'identité.
+    \item[b)] Tout homéomorphisme orienté de $I = [0, 1]$ est isotope à l'identité par isotopie fixe sur $\{0, 1\}$.
+    \item[c)] Tout homéomorphisme orienté de $S^1$ fixe sur $1$ est isotope à l'identité par isotopie fixe sur $1$.
+\end{itemize}
+}
+\vskip .3cm
+Il résultera du lemme ci-dessus que la composante de l'identité dans $\Aut (]0, 1[)$ (resp. $\Aut \mathbb{S}^1$, $\Aut I$, $\Aut (\mathbb{S}^1 ; 1)$) est formée des homéomorphismes orientés de $]0, 1[$ (resp. de $\mathbb{S}^1$, de $I$, de $(\mathbb{S}^1 ; 1)$).
+
+En fait on va montrer les deux lemmes~:
+\vskip .3cm
+{
+Lemme {\bf 1.5.2}. --- \it Le groupe $\Aut^+ I$ des homéomorphismes orientés de $I = [0,1]$ est contractile, ainsi que les groupes $\Aut^+(]0,1[)$, $\Aut^+(\mathbb{S}^1 ; 1)$.
+
+($\Aut^+(]0,1[)$ désigne le groupe des homéomorphismes orientés de $]0,1[$~; $\Aut^+(S^1 ; 1)$ désigne le groupe des homéomorphismes orientés de $\mathbb{S}^1$ fixes sur $1$~; et d'une façon générale si $X$ est une variété orientable connexe $\Aut^+ X$ désignera le groupe des homéomorphismes orientés de $X$)
+}
+\vskip .3cm
+{
+Lemme {\bf 1.5.3}. --- \it L'injection~:
+\[
+\mathbb{S}^1 \to \Aut^+ \mathbb{S}^1
+\leqno{(1.5.3.1)}
+\]
+qui à tout nombre complexe $z$ de module $1$ associe la translation $\operatorname{trans}(z)$ par $z$, est une équivalence d'homotopie.
+}
+\vskip .3cm
+Il est clair que le lemme 1.5.1. est conséquence des lemmes 1.5.2. et 1.5.3. (la connexité de $\Aut^+ S^1$ découlant de l'énoncé 1.5.3.).
+
+Nous montrons d'abord 1.5.2.~:
+\begin{itemize}
+    \item[$1^{\circ}$)] $\Aut^+ I$ est constitué des applications strictement croissantes surjectives et continues de $I$ dans $I$~; une contraction $F$ de $\Aut^+ I$ est donnée par l'application~:
+    \[
+    F : \Aut^+ I \times I \rightarrow \Aut^+ I \quad \text{qui à } (h,\lambda) \text{ associe } h_{\lambda} : [t \rightarrow \lambda t + (1-\lambda)h(t)].
+    \]
+    On a bien~: $h_0 = F(h,0) = h$, $h_1 = F(h,1) = \operatorname{id}_I$ et pour tout $\lambda (\lambda \in I)$, $h_{\lambda}$ est bien un élément de $\Aut^+ I$.
+    \item[$2^{\circ}$)] L'application $F'$ définie par la même formule que $F$ (ci-dessus), mais à domaine $\Aut^+(]0,1[) \times I$ et à valeurs dans $\Aut^+(]0,1[)$ définit une contraction de ce dernier espace.
+    \item[$3^{\circ}$)] Le groupe $\Aut^+(S^1 ; 1)$ est homéomorphe au groupe $\Aut^+ I$ (Remarquer que se donner un homéomorphisme orienté de $(S^1 ; 1)$ sur lui-même, revient à se donner une application continue croissante et bijective de $[0,2\pi]$ sur $[0,2\pi]$), et par conséquent contractile.
+    \item[$4^{\circ}$)] pour démontrer le lemme 3, on remarque que l'application $\Aut^+(S^1 ; 1) \times \mathbb{S}^1 \to \Aut^+ \mathbb{S}^1$ qui à $(h,z)$ associe $\operatorname{trans}(z) \circ h$ est un homéomorphisme ayant pour inverse l'application qui à $g \in \Aut^+ \mathbb{S}^1$ associe $(\operatorname{trans}(\frac{1}{g(1)}) \circ g, \operatorname{trans}(g(1)))$. Il suffit donc de remarquer que l'injection canonique~: $\mathbb{S}^1 \to \Aut^+(\mathbb{S}^1 ; 1) \times \mathbb{S}^1$ est une équivalence d'homotopie puisque $\Aut^+(\mathbb{S}^1 ; 1)$ est contractile par le lemme 2.
+\end{itemize}
+
+{\bf 1.5.4} Remarque. (Ici et partout dans la suite lorsque $G$ est un groupe topologique ayant $e$ pour élément neutre, $\pi_1 G$ désigne $\pi_1(G ; e)$)~:
+si $\Gamma$ est un cercle (1-variété connexe compacte) on déduit du lemme 1.5.3. que $\pi_1 \Aut^+ \Gamma$ est isomorphe à $\mathbf{Z}$. Mais de plus, si $\Gamma$ est orienté, il existe un isomorphisme \emph{canonique} $\mathbf{Z} \to \pi_1 \Aut^+ \Gamma$ obtenu en choisissant un homéomorphisme orienté $h$ de $S^1$ sur $\Gamma$ ($\mathbb{S}^1$ étant orientée de façon standard) et en formant le composé
+\[
+\mathbf{Z} \isommap \pi_1(\mathbb{S}^1 ; 1) \isommap \pi_1 \Aut^+ S^1 \isommap \pi_1 \Aut^+ \Gamma
+\]
+(où la première flèche représente l'isomorphisme canonique qui à $1$ associe le lacet générateur ``positif''~: $t \to e^{2\pi i t}$ ($t \in I$), la seconde flèche étant déduite de l'application {\bf 1.5.3.1} et la troisième flèche celle induite par $h$).
+
+{\bf 1.5.5.} Démonstration de la proposition {\bf 1.5.}
+\begin{itemize}
+\item[$1^{\circ}$)] Soient $h$ un élément de $\Aut K$, $h$ isotope à l'identité dans $\Aut K$,
+\[
+H(x,t) : K \times I \to K
+\]
+une isotopie de $\operatorname{id}_K$ à $h$, et $h_t \in \Aut K$ défini par
+\[
+h_t(x) = H(x,t) \qquad\qquad \text{(pour tout } x \in K\text{)},
+\]
+on a $h_0 = \operatorname{id}_K$, $h_1 = h$.
+
+Soit $x_0 \in S$, alors $H|{\{x_0\} \times I}$ est une application continue de l'espace connexe $\{x_0\} \times I$ dans l'espace discret $S$~: elle est donc constante. On en déduit $x_0 = H(x_0,0) = H(x_0,1) = h(x_0)$. On a donc $S(h) = \operatorname{id}_S$. Quant à l'isotopie $H$, elle est fixe sur $S$ et induit une isotopie $H'$ menant de l'identité de $K \setminus S$ à $h | K \setminus S$~:
+\[
+H' = H | (K \setminus S) \times I : (K \setminus S) \times I \to K \setminus S.
+\]
+Soit $\alpha$ une arête (i.e~: une composante de $K \setminus S$)~; $\alpha \times I$ est connexe et est donc envoyé par $H'$ dans une composante de $K \setminus S$. On montre que cette composante est $\alpha$ en prenant la restriction de $H'$ à $\alpha \times \{0\}$~: sur cet ensemble $H'$ coïncide avec la première projection. On en déduit $h(\alpha) = h_1(\alpha) = h_0(\alpha) = \alpha$.
+
+Par conséquent $H | \alpha \times I$ est une isotopie de $\text{id}_{\alpha}$ à $h | \alpha$, il en résulte que $h | \alpha$ conserve l'orientation, donc si $a$ est un arc associé à $\alpha$, on a $A(h)(a) = a$.
+\item[$2^{\circ}$)] Supposons maintenant que $h$ est un élément de $\Aut K$ et que $A(h) = \text{id}_A$, $S(h) = \text{id}_S$.
+
+Pour toute arête $\alpha$ on a $h(\alpha) = \alpha$ et $h | \alpha$ conserve l'orientation.
+
+Il y a trois cas à considérer~:
+\begin{itemize}
+    \item[a)] Si $\alpha$ est une boucle isolée, utilisant le lemme 1.5.1. on déduit que $h | \alpha$ est isotope à $\operatorname{id}_{\alpha}$ par une isotopie fixe en dehors de $\alpha$.
+    \item[b)] Si à $\alpha$ correspondent deux arcs pour lesquels source et but dans $K$ sont distincts, utilisant toujours le lemme {\bf 1.5.1.}, on déduit que $h | \bar{\alpha}$ est isotope à $\text{id}_{\bar{\alpha}}$ par isotopie fixe en dehors de $\bar{\alpha}$ ($\bar{\alpha}$ désigne l'adhérence de $\alpha$ dans $K$).
+    \item[c)] Si à $\alpha$ correspondent deux arcs pour lesquels source et but dans $K$ sont confondus, utilisant maintenant le lemme 1.5.2. on déduit également que $h | \bar{\alpha}$ est isotope à l'identité par isotopie fixe en dehors de $\alpha$.
+\end{itemize}
+Finalement, toutes les isotopies ainsi obtenues pour toutes les arêtes $\alpha$ déterminent une isotopie globale de $h$ à $\operatorname{id}_K$ (isotopie fixe sur $S$).
+\end{itemize}
+
+\vskip .3cm
+{\bf 1.6}. --- Type d'homotopie de $\Aut~K$.
+
+La proposition {\bf 1.5.} donne une détermination de la composante $\Aut^\circ K$ de l'identité dans $\Aut K$. (D'une façon générale si $G$ est un groupe topologique, on notera $G^\circ$ la composante connexe par arcs de l'élément neutre dans $G$.) La proposition suivante achève la détermination du type d'homotopie de $\Aut K$~:
+\vskip .3cm
+{
+Proposition {\bf 1.6.1.}. --- \it Si $K$ comporte $p$ boucles isolées, le type d'homotopie de $\Aut^\circ K$ est celui de $(\mathbb{S}^1)^p$.
+}
+\vskip .3cm
+{
+Corrollaire. --- \it Si $K$ ne comporte pas de boucles isolées alors $\Aut^\circ K$ est contractile.
+}
+\vskip .3cm
+Démonstration. Il résulte de la proposition 1.5. que~:
+\[
+\Aut^\circ K \isom \prod_{\alpha \in \pi_0(K \setminus S)} \Aut^+ \bar{\alpha}
+\]
+La proposition {\bf 1.6.1.} est alors conséquence des lemmes {\bf 1.5.2.} et {\bf 1.5.3.} qui établissent que $\Aut^+ \bar{\alpha}$ est contractile sauf si $\alpha$ est une boucle isolée, auquel cas $\Aut^+ \bar{\alpha} = \Aut^+ \alpha$, et ce dernier a le type d'homotopie de $\mathbb{S}^1$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{2. La catégorie $\kc$ des 1-complexes combinatoires.}
+\addcontentsline{toc}{subsection}{2. La catégorie $\kc$ des 1-complexes combinatoires}
+
+{\bf 2.1}. --- Un \emph{1-complexe combinatoire} est un quintuplet $k = (S, A, B, \sigma, s)$ où $S$ et $A$ sont des ensembles finis, $B$ une partie de $A$, $\sigma$ une involution sans point fixe de $A$ telle que $\sigma(B) = B$, et $s$ une application de $A \setminus B$ dans $S$.
+
+$S$ sera appelé \emph{ensemble des sommets}, $A$ \emph{ensemble des arcs}, $B$ ensemble des \emph{arcs sans source} (ou \emph{arcs boucles isolées}), $A \setminus B$ ensemble des arcs avec source. Si $a \in A \setminus B$, $s(a)$ sera appelé \emph{source} de $a$, $s(\sigma(a))$ sera appelé \emph{but} de $a$ et noté $b(a)$. Si $a \in A$, $\sigma(a)$ sera appelé \emph{l'inverse} de $a$.
+
+\vskip .3cm
+{\bf 2.2}. --- Étant donné deux 1-complexes combinatoires $k$ et $k'$ ($k = (S,A,B,\sigma,s)$, $k' = (S',A',\sigma',s')$), un \emph{isomorphisme de 1-complexes combinatoires} entre $k$ et $k'$ est un couple $b = (\varphi, \psi)$ où $\varphi$ est une bijection de $S$ sur $S'$, $\psi$ une bijection de $A$ sur $A'$ telles que~: $\psi(B) = B'$ (ce qui entraîne : $\psi(A \setminus B) = A' \setminus B'$), et que les deux diagrammes~:
+\[\begin{tikzcd}
+	{A\setminus B} & S && A & A \\
+	{A' \setminus B'} & {S'} && {A'} & {A'}
+	\arrow["s", from=1-1, to=1-2]
+	\arrow["{\psi_{|A\setminus B}}", from=1-1, to=2-1]
+	\arrow["\varphi", from=1-2, to=2-2]
+	\arrow["\sigma", from=1-4, to=1-5]
+	\arrow["\psi", from=1-4, to=2-4]
+	\arrow["\psi", from=1-5, to=2-5]
+	\arrow["{s'}", from=2-1, to=2-2]
+	\arrow["{\sigma'}", from=2-4, to=2-5]
+\end{tikzcd}\]
+soient commutatifs (si $b' = s' \circ \sigma'$, on a par conséquent~: $b' \circ \psi|{A \setminus B} = \varphi \circ b$.)
+
+\vskip .3cm
+{\bf 2.3}. --- La \emph{catégorie des 1-complexes combinatoires} est la \emph{catégorie $\kc$} dont les objets sont les 1-complexes combinatoires et les flèches sont les isomorphismes définis en {\bf 2.2.} C'est un groupoïde.
+
+Remarque. l'intérêt des notions introduites dans {\bf 2.1} à {\bf 2.3.} tient au fait que la catégorie $\kc$ fournit une description ``combinatoire'', à équivalence près, de la catégorie $Kt$ (catégorie isotopique des 1-complexes topologiques), comme on verra dans le \S~3 que nous conseillons au lecteur d'aborder avant les digressions techniques qui suivent sur le groupoïde fondamental combinatoire.
+
+\vskip .3cm
+{\bf *2.4}. --- groupoïde fondamental d'un 1-complexe combinatoire sans boucles isolées.
+
+Soit $\kcp$ la sous catégorie pleine de $\kc$ formée des 1-complexes combinatoires \emph{purs}, i.e. ceux pour lesquels $B = \emptyset$. Nous allons définir un foncteur de $kcp$ dans la catégorie $\GR$ des groupoïdes, catégorie ayant pour objets les groupoïdes et pour flèches les foncteurs isomorphismes de groupoïdes.
+
+{\bf 2.4.1.} Soit donc $k = (S, A, \emptyset, \sigma, s)$ un objet de $\kcp$.
+
+L'ensemble $SF(A)$ des suites finies (éventuellement vides) d'éléments de $A$ est un monoïde associatif unitaire pour la loi $*$ de concaténation des suites finies :
+\[ 
+(a_1,a_2,\dots a_n) * (b_1,b_2,\dots b_m) = (a_1,a_2,\dots, a_n, b_1,b_2,\dots, b_m). 
+\]
+La suite vide en est l'élément neutre.
+
+On appellera \emph{chemin} de $k$ de source $x$, de but $y$, tout élément $\gamma$ de $S \times S \times SF(A)$ de la forme~: $\gamma = (x,y,(a_1,a_2,\dots, a_n))$ où $s(a_1) = x$, $b(a_n) = y$, et pour tout $i = 1,\dots,n-1$~: $b(a_i) = s(a_{i+1})$
+On notera $x = s(\gamma)$, $y = b(\gamma)$.
+
+Si $\gamma = (x,y,\tau)$ et $\gamma' = (y,z,\tau')$ sont deux chemins tels que $b(\gamma)=s(\gamma')$ on définit leur \emph{composé} $\gamma' \cdot \gamma$ comme étant~: $\gamma' \cdot \gamma = (x,z,\tau * \tau')$. Cette opération est associative.
+
+Un \emph{lacet d'origine $x$} est un chemin $\gamma$ tel que $s(\gamma) = b(\gamma) = x$.
+
+Le \emph{lacet constant d'origine $x$} est $c_x = (x,x,\emptyset)$
+
+Le chemin \emph{opposé} de $\gamma = (x,y,(a_1,a_2,\dots a_n))$ est le chemin $(y,x,(\sigma(a_n),\sigma(a_{n-1}),\dots,\sigma(a_1)))$.
+
+On dit que $k$ est \emph{connexe} si pour tout couple $(x,y)$ de sommets de $k$ il existe un chemin de $k$ de source $x$, de but $y$.
+
+De façon évidente, tout 1-complexe combinatoire pur $k$ est somme dans la catégorie $\kcp$ de 1-complexe \emph{connexes} $k_1,k_2,\dots,k_n$ qu'on appellera ses \emph{composantes} (N.B.~: la \emph{somme} des 1-complexes combinatoires $k_i = (S_i,A_i,B_i,\sigma_i,s_i)$ ($i = 1,\dots,n$) est le 1-complexe
+$$
+k = (\amalg_{i = 0}^n S_i, \amalg_{i = 0}^n A_i, \amalg_{i = 0}^n B_i, \amalg_{i = 0}^n \sigma_i, \amalg_{i = 0}^n s_i))
+$$
+{\bf 2.4.2.} Soit $L(A)$ le groupe libre engendré par la base \emph{symétrisée} $A$ (où l'inverse dans $L(A)$ de $a \in A$ est $\sigma(a)$), on a un homomorphisme $L$ canonique du monoïde $SF(A)$ dans $L(A)$ induit par l'identité sur $A$ ($A$ est une base du monoïde libre $SF(A)$). Par conséquent à tout chemin $\gamma$ est associé un élément (qu'on notera $L(\gamma)$) de $L(A)$, à savoir l'image par $L$ de la suite finie de $A$ associée à $\gamma$. Si $\gamma$ et $\gamma'$ sont deux chemins tels que $s(\gamma') = b(\gamma)$, il est clair que $L(\gamma' \cdot \gamma) = L(\gamma) \cdot L(\gamma')$.
+Deux chemins $\gamma$ et $\gamma'$ de $k$ seront dits \emph{homotopes} dans $K$ si et seulement si $L(\gamma) = L(\gamma')$.
+
+Remarquons que vu la construction du groupe libre $L(A)$ cette relation est la cloture réflexive symétrique transitive de la relation ``élémentaire'' $R$~:
+
+$\gamma \, R \, \gamma' \Leftrightarrow$ il existe des chemins $c, d, d'$ de $k$, le chemin $c$ étant de
+la forme $(x, y, (a, \sigma(a)))$, tels que $\gamma = d' \cdot d$ et $\gamma' = d' \cdot c \cdot d$.
+
+Par conséquent il résulte des propriétés des groupes libres que toute classe d'homotopie de chemins de $k$ contient un \emph{unique} chemin réduit, c'est à dire tel que la suite d'arcs associée ne contienne pas deux arcs consécutifs inverses l'un de l'autre.
+
+De la remarque, on déduit que deux chemins homotopes ont même source, même but. Si on note $[\gamma]$ la classe du chemin $\gamma$, on pourra donc parler de la source $s([\gamma])$ de $[\gamma]$ et du but $b([\gamma])$ de $[\gamma]$~; on a $s([\gamma]) = s(\gamma)$ et $b([\gamma]) = b(\gamma)$.
+
+La classe d'un lacet est composée de lacets de même origine.
+
+{\bf 2.4.3.} Du fait que $L$ est un homomorphisme de monoïdes et de la définition de la relation d'homotopie on déduit que celle-ci est compatible avec la composition des chemins et par conséquent, la relation $[\gamma'] \cdot [\gamma] = [\gamma' \cdot \gamma]$ définit une composition (associative), des classes $[\gamma]$ et $[\gamma']$ telles que $b([\gamma]) = s([\gamma'])$.
+
+Il est immédiat que si $[\gamma]$ est une classe de chemin de source $x$ de but $y$, on a~: $[c_y] \cdot [\gamma] = [\gamma] \cdot [c_x] = [\gamma]$~; de plus il existe une classe $[\gamma']$ de chemins, de source $y$ et de but $x$, telle que $[\gamma'] \cdot [\gamma] = [c_x]$ et $[\gamma] \cdot [\gamma'] = [c_y]$ (prendre pour $\gamma'$ le chemin opposé à $\gamma$).
+
+On définit donc une catégorie $\pi(k)$ en prenant pour objets les sommets de $k$ et pour flèches d'un objet $x$ à un objet $y$, les classes de chemins de $k$, de source $x$, de but $y$~; cette catégorie est un groupoïde qu'on appellera ``\emph{groupoïde fondamental}'' de $k$. L'ensemble des classes de lacets d'origine $x$ ($x \in S$), muni de la composition des classes, est donc un groupe qu'on appellera groupe fondamental d'origine $x$ de $k$, et qu'on notera $\pi_1(k ; x)$.
+
+Remarquons que l'homorphisme $L$ induit par restriction et passage au quotient une injection de $\pi_1(k ; x)$ dans $L(A)$, et que par conséquent $\pi_1(k ; x)$, étant ainsi identifié à un sous-groupe de groupe libre, est lui-même un groupe libre.
+
+{\bf 2.4.4.} Étant donné deux objets $k$ et $k'$ de $\kcp$ ($k = (S, A, \phi, \sigma, s)$, $k' = (S', A', \phi, \sigma', s')$) et un isomorphisme $b = (\varphi, \psi)$ entre eux, on peut associer à $b$ un isomorphisme $\pi(b)$ entre $\pi(k)$ et $\pi(k')$ de la manière suivante~:
+\begin{itemize}
+    \item[a)] $\varphi$ est une bijection de l'ensemble $S$ des objets de $\pi(k)$ sur l'ensemble $S'$ des objets de $\pi(k')$~; on définit $\pi(b)$ comme étant égal à $\varphi$ sur les objets.
+    \item[b)] par transport de structure, $\psi$ induit une bijection entre les classes de chemins de $k$ et de $k'$~; on définit $\pi(b)$ comme étant égal à cette bijection sur les morphismes.
+\end{itemize}
+
+{\bf 2.4.5.} Le foncteur annoncé $\kcp \to \GR$, qu'on notera $\pi$, est défini sur les objets en {\bf 2.4.3.} et sur les morphismes en {\bf 2.4.4.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{3. L'équivalence canonique entre les catégories $\Kt$ et $\kc$.}
+\addcontentsline{toc}{subsection}{3. L'équivalence canonique entre les catégories $\Kt$ et $\kc$}
+
+{\bf 3.1}. --- Définition d'un foncteur $c$ de $\Kt$ dans $\kc$.
+
+On définit le foncteur ``\emph{représentation combinatoire}'' de la fa\c{c}on suivante~:
+
+A tout 1-complexe $K$ dont l'ensemble des sommets est $S$, l'ensemble des arcs est $A$, l'ensemble des boucles est $B$, on associe le 1-complexe combinatoire $c(K) = (S, A, B, \sigma, s)$, où $\sigma$ est l'involution sans point fixe de $A$ qui à tout arc associe son inverse, et $s$ l'application ``source'' de $A \setminus B$ dans $S$ qui à tout arc avec source associe sa source dans $K$.
+
+Si $K'$ est un autre 1-complexe et $c(K') = (S', A', B', \sigma', s')$, et si $\bar{h}$ est une classe d'isotopie d'isomorphismes de $K$ sur $K'$, on choisit un représentant $h$ de cette classe et on définit la flèche $c(\bar{h})$ comme étant le couple $(S(h),A(h))$ ($S(h)$ et $A(h)$ ont été définis en {\bf 1.4.})~; la proposition {\bf 1.5.} permet d'affirmer que si on choisit un autre représentant $h'$ de $\bar{h}$ on a bien $S(h) = S(h')$ et $A(h) = A(h')$ car alors $h' \circ h^{-1}$ est isotope à l'identité de $k'$ et~:
+$$
+S(h') \circ S(h)^{-1} = S(h' \circ h^{-1}) = \operatorname{id}_{S'}
+$$
+$$
+A(h') \circ A(h)^{-1} = A(h' \circ h^{-1}) = \operatorname{id}_{A'}
+$$
+La vérification des propriétés {\bf 2.2.} est immédiate pour ce couple, ainsi que le fait que $c$ est bien un foncteur (qui provient essentiellement de ce que si $h \in \operatorname{Isom}(K,K')$ et $h' \in \operatorname{Isom}(K',K'')$ on a $S(h' \circ h) = S(h') \circ S(h)$ et $A(h' \circ h) = A(h') \circ A(h)$).
+
+\vskip .3cm
+{\bf 3.2}. --- Définition d'un foncteur $r$ de $\kc$ dans $\Kt$
+
+On définit le foncteur ``\emph{réalisation topologique}'' comme suit~:
+
+{\bf 3.2.1.} A tout 1-complexe combinatoire $k = (S, A, B, \sigma, s)$ on associe le 1-complexe topologique $r(k)$ obtenu par recollement des 0 et 1-variétés à bord~:
+
+$S$ (ensemble discret), $(A \setminus B) \times I$ (où $A \setminus B$ est muni de la topologie discrète et $I = [0,1]$ muni de la topologie standard), et $B \times S^1$, ($B$ ensemble discret, $S^1$ muni de la topologie standard), selon les lois~:
+\begin{itemize}
+    \item[$1^\circ$)] Pour tout $a \in A \setminus B$~: $\{a\} \times I$, (composante connexe de $(A \setminus B) \times I$, homéomorphe à $I$) est recollée sur $S$ en identifiant les points $(a,0)$ et $s(a)$
+    \item[$2^\circ$)] Pour tout $a \in A \setminus B$~: $\{a\} \times I$ est identifié à $\{\sigma(a)\} \times I$ en identifiant pour tout $t \in I$ le point $(a,t)$ au point $(\sigma(a), 1-t)$.
+    \item[$3^\circ$)] Pour tout $a \in B$~: $\{a\} \times S^1$ est identifié à $\{\sigma(a)\} \times \mathbb{S}^1$ en identifiant pour tout $z \in \mathbb{S}^1$ le point $(a,z)$ au point $(\sigma(a),\bar{z})$
+\end{itemize}
+Remarquons de suite que, si $a$ est dans $A \setminus B$, le point $(a,1)$ de $\{a\} \times I$ est identifié par $2^\circ$) à $(\sigma(a),0)$ et donc par $1^\circ$) à $s(\sigma(a))$, or $s(\sigma(a)) = b(a)$.
+\vskip .3cm
+\begin{minipage}{\linewidth}
+    \centering
+    \includegraphics[width=130mm,scale=1]{figs/1.png}
+\end{minipage}
+\vskip .3cm
+Il est clair qu'on obtient un 1-complexe dont l'ensemble $S_k$ des sommets est égal à $S$ et dont l'ensemble $A_k$ des arcs est en bijection canonique avec $A$ par l'application $\psi_k$ qui, à tout $\{ a \} \times I$, associe $a$ (si $a \in A \setminus B$), et qui à tout $\{ a \} \times \mathbb{S}^1$ associe $a$ (si $a \in B$).
+
+{\bf 3.2.2.} Si $k' = (S', A', B', \sigma', s')$ est un autre $1$-complexe combinatoire et $b = (\varphi, \psi)$ un isomorphisme combinatoire de $k$ sur $k'$, on définit une classe $r(b)$ d'isotopie d'homéomorphismes de $r(k)$ sur $r(k')$ comme étant la classe de l'homéomorphisme $h_b$ obtenu par ``recollement'' des homéomorphismes~:
+\begin{align*}
+    h_s &: S \isommap S' : (x \to \varphi(x)) \\
+    h_a &: \{a\} \times I \to \{\psi(a)\} \times I : ((a, t) \to (\psi(a), t)) \text{ pour tout } a \in A \setminus B \\
+    h_{a'} &: \{a'\} \times \mathbb{S}^1 \to \{\psi(a')\} \times \mathbb{S}^1 : ((a', z) \to (\psi(a'), z)) \text{ pour tout } a' \in B
+\end{align*}
+(Ces homéomorphismes, étant compatibles avec les opérations de recollement qui définissent $r(k)$ et $r(k')$, induisent bien un homéomorphisme de $r(k)$ sur $r(k')$.)
+
+Au total, les paragraphes {\bf 3.2.1.} et {\bf 3.2.2.} donnent la construction du foncteur $r$ annoncé.
+\vskip .3cm
+{
+Théorème {\bf 3.3.} --- \it  Les foncteurs $r$ et $c$ sont des équivalences quasi-inverses l'une de l'autre.
+}
+\vskip .3cm
+Pour cela on va montrer que le foncteur $c \circ r$ est isomorphe au foncteur identique de $kc$, et que le foncteur $r \circ c$ est isomorphe au foncteur identique de $\Kt$.
+
+{\bf 3.3.1.} Il existe pour tout objet $k$ de $\kc$ un isomorphisme canonique $b_k$ de $\kc$ entre $k$ et $c(r(k))$. En effet si $k$ est $(S, A, B, \sigma, s)$, $r(k)$ a pour ensemble de sommets $S_k = S$ et pour ensemble d'arcs $A_k$ en bijection canonique $\psi_k$ avec $A$ (cf. fin du \S {\bf 3.2.1.}). Notons $\sigma_k$ l'involution sans point fixe de $A_k$ qui à un arc associe son inverse, et $s_k$ l'application source de $A_k \setminus B_k$ dans $S_k$ (où $B_k$ est l'ensemble des arcs sans source de $r(k)$). On a alors~:
+\[
+c(r(k)) = (S_k, A_k, B_k, \sigma_k, s_k), \text{ et le couple } b_k = (\operatorname{id}_S, \psi_k)
+\]
+(où $\psi_k$ est définie à la fin de {\bf 3.2.1}) est un isomorphisme combinatoire entre $c(r(k))$ et $k$.
+
+Pour démontrer que l'application qui à tout $k$ objet de $kc$ associe l'isomorphisme $b_k$ entre $c(r(k))$ et $k$ est un isomorphisme entre les foncteurs $c \circ r$ et $\operatorname{id}_{\kc}$ il suffit de vérifier que pour tout autre 1-complexe combinatoire $k'$ et tout isomorphisme $b$, (de $\kc$), entre $k$ et $k'$ on a le diagramme commutatif~:
+\[\begin{tikzcd}
+	{c(r(k))} & {c(r(k'))} \\
+	k & {k'}
+	\arrow["{c(r(b))}", from=1-1, to=1-2]
+	\arrow["{b_k}", from=1-1, to=2-1]
+	\arrow["{b_{k'}}", from=1-2, to=2-2]
+	\arrow["b", from=2-1, to=2-2]
+\end{tikzcd}\]
+or si $b = (\varphi, \psi)$ on a $c(r(b)) = (\varphi, A(r(\psi)))$ et il suffit donc de vérifier que~:
+\[
+\psi \circ \psi_k = \psi_{k'} \circ A(r(\psi)).
+\]
+Or $\psi \circ \psi_k$, à $\{a\} \times I$ (ou $\{a\} \times \mathbb{S}^1$), associe d'abord par $\psi_k : a$, puis par $\psi : \psi(a)$.
+
+Quant à $\psi_{k'} \circ A(r(\psi))$, elle associe à $\{a\} \times I$ (ou $\{a\} \times \mathbb{S}^1$), d'abord par $A(r(\psi)) : \{\psi(a)\} \times I$ (ou $\{\psi(a)\} \times S^1$), puis par $\psi_{k'} : \psi(a)$. c.q.f.d.
+
+{\bf 3.3.2.} Pour tout objet $K$ de $Kt$ il existe une classe (canonique) d'isotopie d'homéomorphismes de $r(c(K))$ sur $K$ qu'on notera $H_K$. En effet d'après la proposition {\bf 1.5.} une telle classe d'homéomorphismes $h$ est parfaitement déterminée par la connaissance de $S(h)$ et $A(h)$. On va donc déterminer un homéomorphisme de $r(c(K))$ sur $K$ qui induise l'identité sur l'ensemble $S$ des sommets (c'est le même pour $r(c(K))$ et pour $K$), et qui sur les ensembles d'arcs induise l'application qui, à tout arc $\{a\} \times I$ (ou $\{a\} \times \mathbb{S}^1$) de $r(c(K))$, associe l'arc $a$ de $K$. Or, l'existence d'un tel homéomorphisme est conséquence du lemme~:
+\vskip .3cm
+{
+Lemma. --- \it Soient $K, K'$ deux $1$-complexes topologiques et $b$ un élément de $\Hom_{\kc}[c(K), c(K')]$, il existe un isomorphisme $h$ de $K$ sur $K'$ tel que $b = (S(h), A(h))$.
+}
+\vskip .3cm
+Démonstration. Soit $b = (\varphi, \psi), c(K) = (S, A, B, \sigma, s), c(K') = (S', A', B', \sigma', s')$.
+
+Soit $h_S = \varphi : S \to S'$, et pour toute arête $\alpha$ de $K$ à laquelle sont associés les arcs $a_\alpha, \sigma(a_\alpha)$ de $K$, choisissons un homéomorphisme orienté $h_\alpha$ de $a_\alpha$ sur $a'_\alpha = \psi(a_\alpha)$, alors la famille des applications $h_S, h_\alpha, (\alpha \in \pi_o(K \setminus S))$, détermine un homéomorphisme $h$ solution du problème. c.q.f.d.
+
+Pour démontrer que l'application qui, à tout $K$ objet de $Kt$, associe l'isomorphisme $H_K$ (de $\Kt$) entre $r(c(K))$ et $K$, est un isomorphisme entre les foncteurs $r \circ c$ et $\operatorname{id}_{\Kt}$, il faut vérifier que pour tout autre objet $K'$ de $\Kt$ et pour tout isomorphisme $\overline{g}$ de $\Kt$ entre $K$ et $K'$ on a un diagramme commutatif~:
+\[\begin{tikzcd}
+	{r(c(K))} & {r(c(K'))} \\
+	K & {K'}
+	\arrow["{r(c(\overline{g}))}", from=1-1, to=1-2]
+	\arrow["{H_k}", from=1-1, to=2-1]
+	\arrow["{H_{K'}}", from=1-2, to=2-2]
+	\arrow["{\overline{g}}", from=2-1, to=2-2]
+\end{tikzcd}\]
+ou encore, que les classes d'isotopie $H_1 = H_{K'} \circ r(c(\overline{g}))$ et $H_2 = \overline{g} \circ H_K$ sont les mêmes, or cela se vérifie sans difficultés en remarquant que par construction de $H_K$ et $H_{K'}$, on a $S(H_1) = S(H_2)$ et $A(H_1) = A(H_2)$, et en appliquant la proposition {\bf 1.5.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{*4. L'équivalence canonique entre $\pi(c(K))$ et $\pi(K)$.}
+\addcontentsline{toc}{subsection}{*4. L'équivalence canonique entre $\pi(c(K))$ et $\pi(K)$}
+
+{\bf 4.1}. --- On considère la sous catégorie pleine de $\Kt$ constituée par les 1-complexes topologiques \emph{purs} (i.e. sans boucles isolées). Soit $K$ un objet de cette catégorie $\Ktp$, notons $\pi(K)$ le groupoïde fondamental de $K$ (cf. 99.). On obtient ainsi, de façon classique, un foncteur $\pi$ de $\Ktp$ (ou plus généralement de la catégorie des espaces topologiques et homéomorphismes) dans $\GR$, catégorie des groupoïdes.
+
+Si on note toujours $c$ (par abus de notation) la restriction de $c$ à $\Ktp$, on a le diagramme~:
+\[\begin{tikzcd}
+	\Ktp && \kcp \\
+	& \GR
+	\arrow["c", from=1-1, to=1-3]
+	\arrow["\approx"', from=1-1, to=1-3]
+	\arrow["\pi"', from=1-1, to=2-2]
+	\arrow["\pi", from=1-3, to=2-2]
+\end{tikzcd}\]
+On va montrer qu'il est commutatif à isomorphisme de foncteurs près.
+
+\vskip .3cm
+{\bf 4.2}. --- Soit donc $K$ (1-complexes pur) et $c(K) = (S, A, \phi, \sigma, s)$. On définit un foncteur $\varpi_K : \pi(c(K)) \to \pi(K)$ en associant à tout objet de $\pi(c(K))$ (un tel objet est un sommet de $c(K)$, donc de $K$), le sommet de $K$ correspondant~; de plus, si $[\gamma]$ est une classe de chemins de $x$ à $y$ dans $c(K)$, dont un représentant est $\gamma = (x,y,(a_1, a_2,\dots a_n))$, associons à $[\gamma]$ la classe du chemin $\ell_\gamma$ de $K$ de source $x$ de but $y$ qui ``emprunte successivement'' les arcs $a_1,a_2 \dots a_n$. (Il est clair que si $\gamma'$ est un autre représentant de $[\gamma]$, $\ell_{\gamma'}$ et $\ell_\gamma$ sont homotopes, car si $\gamma_i R \gamma_{i+1}$ est une homotopie combinatoire élémentaire (cf. 2.4.2) entre deux chemins $\gamma_i$ et $\gamma_{i+1}$ de $k$, les chemins correspondants $\ell_{\gamma_i}$ et $\ell_{\gamma_{i+1}}$ de $K$ sont homotopes dans $K$).
+
+\vskip .3cm
+{\bf 4.3}. --- Pour montrer que $\varpi_K$ est une équivalence il faut d'abord vérifier qu'il est essentiellement surjectif~: cela est vrai puisque tout point de $K$ est relié par un arc à un sommet de $K$, ($K$ étant pur).
+
+Ensuite pour vérifier que $\varpi_K$ est pleinement fidèle, comme deux sommets $x,y$ sont liés par un chemin de $c(K)$ si et seulement si ils sont liés par un chemin de $K$, il suffit de vérifier que $\varpi_K$ induit un isomorphisme~:
+$$
+\pi_1(c(K);x) \isommap \pi_1(K;x) \quad \quad \text{(où } x \in S\text{)} 
+$$
+et on peut supposer $K$ connexe (Sinon on raisonne sur chacune de ses composantes).
+
+Or la subjectivité de cette flèche provient de ce que tout lacet de $K$ est homotope à un lacet ``constitué d'arcs successifs'' (voir par exemple [79]).
+
+Comme de plus, dans $K$, tout lacet formé d'arcs successifs qui est \emph{réduit} (i.e. il n'y a pas deux arcs successifs inverses l'un de l'autre) n'est pas homotope à un point (voir [79]) lorsque le nombre d'arc est non nul, l'injectivité est assurée.
+
+\vskip .3cm
+{\bf 4.4}. --- Il resterait à vérifier (mais cela est facile et nous ne le ferons pas, pour abréger), que l'application qui, à tout objet $K$ de $Ktp$, associe $\varpi_K$, est bien un isomorphisme du foncteur $\pi \circ c$ au foncteur $\pi$, c'est à dire que pour tout autre 1-complexe pour $K'$ et pour toute classe d'isotopie $\bar{g} : K \to K'$, le diagramme suivant est commutatif.
+\[\begin{tikzcd}
+	{\pi(c(K))} & {\pi(c(K'))} \\
+	{\pi(K)} & {\pi(K')}
+	\arrow["{\pi(c(\bar{g}))}", from=1-1, to=1-2]
+	\arrow["\approx"', from=1-1, to=1-2]
+	\arrow["{\varpi_{K}}", from=1-1, to=2-1]
+	\arrow["{\varpi_{K'}}", from=1-2, to=2-2]
+	\arrow["{\pi(\bar{g})}", from=2-1, to=2-2]
+	\arrow["\approx"', from=2-1, to=2-2]
+\end{tikzcd}\]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{*5. Extensions des catégories $\Kt$ et $\kc$.}
+\addcontentsline{toc}{subsection}{*5. Extensions des catégories $\Kt$ et $\kc$}
+
+{\bf 5.1}. --- Au lieu de $\kc$ on peut considérer la catégorie $\tilde{\kc}$ ayant les mêmes objets (i.e. les 1-complexes combinatoires) mais ayant plus de morphismes que $\kc$~: si $k = (S, A, B, \sigma, s)$ et $k' = (S', A', B', \sigma', s')$ sont deux objets de $\tilde{\kc}$, un $\tilde{\kc}$-morphisme de $k$ sur $k'$ est un triplet $\tilde{b} = (\varphi,\psi,(n_{\alpha})_{\alpha\in B/\sigma})$ où $b = (\varphi,\psi)$ est défini comme en {\bf 2.2.}, mais sans la condition ``$\varphi$ et $\psi$ bijectives'', et où $(n_{\alpha})_{\alpha\in B/\sigma}$ est une famille d'entiers strictement positifs. 
+
+De même, au lieu de $\Kt$, on peut considérer la catégorie $\tilde{\Kt}$ ayant mêmes objets que $\Kt$ (i.e. les 1-complexes topologiques compacts) mais ayant pour morphismes de $K$ dans $K'$ les classes d'isotopie d'applications continues $h$ de $K$ sur $K'$ telles que~: 
+\begin{itemize}
+    \item[$1^\circ$)] $h^{-1}(S') = S$ (où $S =$ ensemble des sommets de $K$, et $S' =$ ensemble des sommets de $K'$).
+    \item[$2^\circ$)] Pour chaque arête $\alpha$ de $K$, $h/\alpha$ est \emph{étale}, et donc induit (si $\alpha$ n'est pas une boucle isolée) un homéomorphisme de $\alpha$ sur une arête $\alpha'$ de $K'$, ou bien (si $\alpha$ est une boucle isolée) un revêtement à $n$ feuillets $\alpha \to \alpha'$ d'une arête $\alpha'$ de $K'$.
+\end{itemize}
+Les catégories $\tilde{\Kt}$ et $\tilde{\kc}$ ne sont plus des groupoïdes, certains de leurs morphismes n'étant pas des isomorphismes. Les foncteurs $c$ et $r$ (définis en {\bf 3.}) peuvent s'étendre en des foncteurs $\tilde{c}$ et $\tilde{r}$ quasi inverses l'un de l'autre~: $\tilde{c} : \tilde{\Kt} \to \tilde{\kc}$, $\tilde{r} : \tilde{kc} \to \tilde{Kt}$ (Dans cette équivalence si $K,K'$ sont deux objets de $\tilde{\Kt}$, $\tilde{h} : K \to K'$ un $\tilde{\Kt}$- morphisme et $\tilde{b} = (\varphi,\psi,(n_{\alpha})_{\alpha\in B/\sigma} )$ l'image $\tilde{c}(\tilde{h})$, alors le \emph{degré} $n_{\alpha} \in (n_{\alpha})_{\alpha\in B/\sigma}$ correspondra au nombre de feuillets de revêtement $h|\alpha : \alpha \to h(\alpha)$). 
+
+\vskip .3cm
+{\bf 5.2}. --- On vérifierait immédiatement que le foncteur groupoïde fondamental $\pi$ d'un 1-complexe combinatoire (défini en {\bf 2.4.}) de $\kcp$ dans $\GR$ s'étend en un foncteur de $\tilde{\kcp}$ dans $\tilde{\GR}$ (où $\tilde{\kcp}$ est la sous catégorie pleine de $\tilde{\kc}$ formée par les 1-complexes purs, et $\tilde{\GR}$ est la catégorie des groupoïdes et foncteurs quelconques entre groupoïdes).
+
+\vskip .3cm
+{\bf 5.3}. --- Enfin, on pourrait, dans $\tilde{\kcp}$, introduire la notion de 1-complexe combinatoire $k'$ \emph{revêtement} d'un autre 1-complexe combinatoire $k$, ou de \emph{morphisme étale} de 1-complexes combinatoires, alors $\pi(k)$ apparaîtrait comme le classifiant des revêtements combinatoires de $k$. Nous ne développons pas cet aspect dont nous n'avons pas besoin dans la suite.
+
+
+% End
