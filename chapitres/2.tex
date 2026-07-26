@@ -78,7 +78,6 @@ Proposition {\bf 2.2.1.} --- \it Toute injection continue de $I$ ($I = [0,1]$) d
 }
 \vskip .3cm
 Pour démontrer cette proposition nous utiliserons les deux lemmes suivants~:
-
 \vskip .3cm
 {
 Lemme {\bf 2.2.2.} (Théorème de Janiszewski) (cf. [27], [98]). --- \it Soient $A$ un fermé de $\mathbf{R}^2$, $B$ un compact de $\mathbf{R}^2$, $a, b$ deux points distincts de $\mathbf{R}^2 \setminus (A \cup B)$. Si ni $A$ ni $B$ ne sépare $a$ et $b$, et si $A \cap B$ est connexe, alors $A \cup B$ ne sépare pas $a$ et $b$ (N.B~: une partie $P$ de $\mathbf{R}^2$ \textup{sépare} les points $a$ et $b$ si $a, b$ n'appartiennent pas à la même composante connexe par arcs de $\mathbf{R}^2 \setminus P$).
@@ -104,14 +103,14 @@ Démonstration. Soit $B_1$ une boule fermée de centre $a$, de rayon $\rho_1$ te
 
 Soit $x_1$ un point de $U_1 \setminus [a, b_1[$ ; comme le complémentaire de $J$ dans $U$ est connexe par arcs (toujours à cause du lemme {\bf 2.2.4.}), on peut, dans ce complémentaire, joindre $x$ à $x_1$ par un arc simple linéaire par morceaux.
 
-On itère alors l'opération précédente en remplaçant $U$ par $U_1$ et $J$ par $[a, b_1]$ : on choisit $B_2$, boule fermée de centre $a$ et de rayon $\rho_2$ tel que $\rho_2 \le \frac{\rho_1}{2}$, $B_2 \subset U_1$ et $\rho_2 < d(a, x_1)$. On appelle $b_2$ le premier point de $J$ qui soit sur $F_2$, la frontière de $B_2$ (lorsque $J$ est décrit de $a$ vers $b$). On construit $U_2$, comme précédemment $U_1$, et on choisit un point $x_2$ de $U_2 \setminus [a, b_2[$, on a $x_2 \in U_1$ et dans $U_1 \setminus J \cap U_1$, connexe par arcs, on joint $x_1$ à $x_2$ par un arc simple linéaire par morceau ne rencontrant pas $[x, x_1]$. En itérant cette opération on construit une suite d'arcs simples linéaires par morceaux : $[x, x_1], [x_1, x_2], \dots, [x_{n-1}, x_n], \dots$ L'ensemble obtenu en rajoutant à $a$ la réunion de ces arcs est un arc simple joignant $x$ à $a$ (la continuité en $a$ se déduit de ce que, pour tout entier $n$, $[x_n, x_{n-1}]$ est contenu dans la boule $B_n$ de rayon inférieur à $\frac{\rho_1}{2^n}$).
+On itère alors l'opération précédente en remplaçant $U$ par $U_1$ et $J$ par $[a, b_1]$ : on choisit $B_2$, boule fermée de centre $a$ et de rayon $\rho_2$ tel que $\rho_2 \le \frac{\rho_1}{2}$, $B_2 \subset U_1$ et $\rho_2 < d(a, x_1)$. On appelle $b_2$ le premier point de $J$ qui soit sur $F_2$, la frontière de $B_2$ (lorsque $J$ est décrit de $a$ vers $b$). On construit $U_2$, comme précédemment $U_1$, et on choisit un point $x_2$ de $U_2 \setminus [a, b_2[$, on a $x_2 \in U_1$ et dans $U_1 \setminus J \cap U_1$, connexe par arcs, on joint $x_1$ à $x_2$ par un arc simple linéaire par morceau ne rencontrant pas $[x, x_1]$. En itérant cette opération on construit une suite d'arcs simples linéaires par morceaux~: $[x, x_1], [x_1, x_2], \dots, [x_{n-1}, x_n], \dots$ L'ensemble obtenu en rajoutant à $a$ la réunion de ces arcs est un arc simple joignant $x$ à $a$ (la continuité en $a$ se déduit de ce que, pour tout entier $n$, $[x_n, x_{n-1}]$ est contenu dans la boule $B_n$ de rayon inférieur à $\frac{\rho_1}{2^n}$).
 \vskip .3cm
 {\bf 2.2.6.} Démonstration de la proposition 2.2.1.~:
 Soit $i$ une injection continue de $I$ dans $\mathbf{R}^2$ et $J$ l'arc $i(I)$. Par le lemme 2.2.5. on peut prolonger $J$ en ses deux extrémités de façon à obtenir un arc $J'$ qui soit linéaire par morceau au voisinage des extrémités. Prenant un point $x$ de $\mathbf{R}^2 \setminus J'$, on peut alors joindre $x$ aux deux extrémités de $J'$ par deux arcs simples n'ayant que $x$ en commun. On obtient ainsi une courbe simple de $\mathbf{R}^2$, image d'une injection continue $\tilde{i}$ de $\partial(I \times I)$ dans $\mathbf{R}^2$, ($\tilde{i}|I = i$). Soit $\tilde{h}$ un homéomorphisme de $\mathbf{R}^2$ sur $\mathbf{R}^2$ tel que $\tilde{h}(\mathbb{S}^1) = \partial(I \times I)$ et soit $h = \tilde{h}|\mathbb{S}^1$. Alors, $\tilde{i} \circ h$ est une injection continue de $\mathbb{S}^1$ dans $\mathbf{R}^2$ et se prolonge ({\bf 2.1.1.}) en homéomorphisme $g$ de $\mathbf{R}^2$ sur lui-même~; $\tilde{h}^{-1} \circ g$ est un homéomorphisme de $\mathbf{R}^2$ sur $\mathbf{R}^2$, prolongeant $i$.
 \vskip .3cm
 {\bf 2.3.} Carte adaptée à un plongement en un point.
 
-Soient $K$ un $1$-complexe compact, $X$ une surface à bord, et $i$ un plongement de $K$ dans $X$. Rappelons qu'on note $B(0;\rho)$ la boule fermée de $\mathbf{R}^2$ de centre $0$ et de rayon $\rho$. On définit \underline{l'étoile standard fermée à $n$ branches} $\overline{\St}_n$ comme étant l'adhérence de $\St_n$ dans $\mathbf{R}^2$.
+Soient $K$ un $1$-complexe compact, $X$ une surface à bord, et $i$ un plongement de $K$ dans $X$. Rappelons qu'on note $B(0;\rho)$ la boule fermée de $\mathbf{R}^2$ de centre $0$ et de rayon $\rho$. On définit \emph{l'étoile standard fermée à $n$ branches} $\overline{\St}_n$ comme étant l'adhérence de $\St_n$ dans $\mathbf{R}^2$.
 \vskip .3cm
 {
 Théorème {\bf 2.3.1.} --- \it Si $x$ est un point de degré $n$ de $K$, tout voisinage $V$ de $i(x)$ dans $X$ contient un disque $D$ de $X$, voisinage de $i(x)$, tel qu'il existe un homéomorphisme $h$ du couple $(D, D \cap i(K))$ sur le couple $(B(0;1), \overline{\St}_n)$, avec $h(i(x)) = 0$. Si $X$ est orientée, on peut choisir $h$ orienté. ($B (0;1)$ étant muni de l'orientation standard).
@@ -132,22 +131,32 @@ On suppose donc d'abord dans ce paragraphe, que $x$ est un sommet de degré $n =
     \includegraphics[width=130mm,scale=1]{figs/2.png}
 \end{minipage}
 \vskip .3cm
-Soit $U$
+Soit $U$ un disque de $X$, voisinage de $i(x)$, ne contenant pas d'autre sommet de $i(K)$ que $i(x)$, $U \subset V$, et $f$ un homéomorphisme de $U$ sur $B(0;1)$, avec $f(i(x)) = 0$. Soit $a$ l'unique arc de $K$ de source $x$ (on identifie ici $a$ avec un segment fermé orienté contenu dans $K$). Soit $z$ le premier point de $a$ (décrit à partir de sa source $x$) tel que $i(z) \in \partial U$~; $z$ existe par compacité de $i(a)$ et $\partial U$. On note $[x,z]$ la portion (fermée) de $a$ comprise entre $x$ et $z$. On a alors $i([x,z]) \subset U$. Soit $\varphi : I \to [x,z]$ un paramétrage de $[x,z]$ avec $\varphi(0) = x$, $\varphi(1) = z$. Alors $f \circ i \circ \varphi : I \to B(0;1)$ est une injection de $I$ dans $B(0;1)$ et donc dans $\mathbf{R}^2$, elle se prolonge (lemme du segment~: {\bf 2.2.1.}) en homéomorphisme $H$ de $\mathbf{R}^2$ sur lui-même. Par continuité en $0$ de $H$, il existe $\rho$, $0 < \rho < 1$, tel que $H(B(0;\rho)) \subset B(0;1)$. Soit donc un tel $\rho$ et soit $y$ le point de $K$ égal à $\varphi(\rho)$. Si $g = f^{-1} \circ H|{B(0;\rho)}$ et si $D_0$ désigne $g(B(0;\rho))$, alors $g$ réalise un homéomorphisme du couple $(B(0;\rho), [0,\rho])$ sur le couple $(D_0, i([x,y]))$.
 
+Il se peut que $D_0 \cap i(K)$ soit différent de $i([x,y])$, mais si $K' = K \setminus [x,y[$ (où $[x,y[$ désigne $[x,y] \setminus \{y\}$), $K'$ étant compact, $i(K') \cap D_0$ est compact et il existe $\rho'$, $0 < \rho' < \rho$, tel que $g(B(0;\rho')) \cap i(K') = \varnothing$. Notons alors $u = \varphi(\rho')$ ($u \in K$), $g' = g|_{B(0;\rho')}$, $D = g(B(0;\rho'))$~; $g'$ réalise un homéomorphisme du couple $(B(0;\rho'), [0,\rho'])$ sur le couple $(D, i([x,u]))$ et on a $i(K) \cap D = i([x,u])$ par construction. Par conséquent si $g''$ est un homéomorphisme du couple $(B(0;1), I)$ sur le couple $(B(0;\rho'), [0,\rho'])$, ($g''$ : homothétie de rapport $1/\rho'$), et si $h$ est l'inverse de $g' \circ g''$, la carte $(D,h)$ est une carte adaptée répondant au problème.
+\vskip .3cm
+{\bf 2.3.4.} démonstration du théorème {\bf 2.3.1} lorsque $n \neq 1$.
 
+Le cas $n = 0$ étant trivial, on supposera $n \geq 2$. Le cas où $x$ n'est pas un sommet (qui n'est possible que si $n = 2$) serait à distinguer, mais il se traite comme celui des sommets de degré 2. On supposera donc que $x$ est un sommet, et on cherche tout d'abord une carte adaptée $(D, h)$ sans exiger que $h$ soit orienté (si $X$ est orientée).
 
+Soit $U$ un disque de $X$, voisinage de $i(x)$ ne rencontrant aucun sommet de $i(K)$ distinct de $i(x)$, $U \subset V$ et $U$ suffisamment petit pour que $\partial U$ rencontre tous les arcs de $i(K)$ issus de $i(x)$. (Tout cela est possible à cause de la compacité de $i(K)$ qui fait, entre autres, que l'ensemble des sommets est une partie discrète).
 
-
-order circulaire sur $\mathbb{S}^1$.
+On choisit un homéomorphisme $f$ de $U$ sur $B(0;1)$~; $\partial U$ est orienté par le choix d'une orientation de $\mathbb{S}^1$, choix supposé fait. Pour chaque arc $a$ de $K$ de source $x$, (il y en a $n \geq 2$), soit $p_a$ le premier point de $i(a)$, décrit de sa source vers son but, qui est sur $\partial U$. Les $n$ points $p_a$ sont rangés sur $\partial U$ dans un certain ordre circulaire~: appelons les $p_1, p_2, \dots, p_n$ dans cet ordre circulaire, et soient $a_1, a_2, \dots, a_n$ les arcs de $i(K)$ correspondants. Soient $q_1, q_2, \dots, q_n$ les images respectives de $p_1, p_2, \dots, p_n$ par $f$~: elles sont rangées dans cet ordre circulaire sur $\mathbb{S}^1$.
 \vskip .3cm
 \begin{minipage}{\linewidth}
     \centering
     \includegraphics[width=130mm,scale=1]{figs/3.png}
 \end{minipage}
 \vskip .3cm
-On note 
+On note $[p_i, p_{i+1}]$ la partie (fermée) de $\partial U$ comprise entre $p_i$ et $p_{i+1}$ lorsqu'on décrit $\partial U$ dans le sens positif~; on désigne par $[i(x), p_i]$ la partie fermée de $a_i$ comprise entre sa source $i(x)$ et $p_i$, on a pour $i = 1, \dots, n$~: $[i(x), p_i] \subset U$. De même $[q_i, q_{i+1}]$ désignera la partie fermée de $S^1$ comprise entre $q_i$ et $q_{i+1}$ (en suivant l'orientation), et $[0, q_i]$ désignera le rayon de $B(0;1)$ menant de $0$ à $q_i$.
 
+Soit $K_0 = \bigcup_{i=1}^n [i(x), p_i]$ et $K_1 = \bigcup_{i=1}^n [0, q_i]$. On va d'abord construire un homéomorphisme $g$, orienté, entre les couples $(U, K_0)$ et $(B(0;1), K_1)$. Pour cela on définit $g$ sur chaque $[p_i, p_{i+1}]$ et sur $[p_n, p_1]$ comme étant égal (respectivement) à $f|{[p_i, p_{i+1}]}$ et $f|{[p_n, p_1]}$. Pour chaque $i$ on choisit un homéomorphisme $g_i$ de $[i(x), p_i]$ sur $[0, q_i]$. Ensuite pour chaque $i = 1, 2, \dots, n-1, n$, $g$ est déjà défini de $[i(x), p_i] \cup [p_i, p_{i+1}] \cup [i(x), p_{i+1}]$ sur $[0, q_i] \cup [q_i, q_{i+1}] \cup [0, q_{i+1}]$ (si $i = n$, remplacer $i+1$ par $1$)~; ces deux ensembles sont des courbes simples bordant respectivement les disques $U_i$ de $U$, et $D_i$ de $B(0; 1)$.
 
+Par le corollaire {\bf 2.1.2} du théorème de Schoenflies, on peut étendre $g$ en un homéomorphisme de chaque $U_i$ sur chaque $D_i$. On obtient ainsi le $g$ cherché.
+
+Choisissant alors un homéomorphisme $g'$ orienté de $(B(0;1), K_1)$ sur $(B(0;1), \overline{\St}_n)$, par composition $g'' = g' \circ g$ est un homéomorphisme de $(U, K_0)$ sur $(B(0;1), \overline{\St}_n)$. Il se peut que $U \cap i(K)$ ne soit pas réduit à $K_0$, mais comme $K' = i(K) \setminus (i(K) \cap \text{int } U)$ est compact, on peut trouver $\rho$, $0 < \rho \leq 1$ tel que $B(0;\rho) \cap g''(K') = \emptyset$. Alors la restriction $h'$ de $g''$ à $D = {g''}^{-1}(B(0;\rho))$ est un homéomorphisme du couple $(D, D \cap i(K))$ sur $(B(0;\rho), \overline{\St}_n \cap B(0;\rho))$~; choisissant un homéomorphisme $h''$ de ce dernier couple sur $(B(0;1), \overline{\St}_n)$, (prendre $h''$ : homothétie de rapport $1/\rho$), on obtient $h = h'' \circ h'$, homéomorphisme répondant au problème.
+
+Si de plus, $X$ est orientée, et si dans la construction précédente $h$ ne respectait pas les orientations induites par celles de $X$ et $\mathbf{R}^2$, il est toujours possible de le composer avec une symétrie convenable de $\mathbf{R}^2$ de façon que le nouvel homéomorphisme respecte les orientations.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{3. Isotopie à un plongement P.L.. Problèmes d'intersections.}
