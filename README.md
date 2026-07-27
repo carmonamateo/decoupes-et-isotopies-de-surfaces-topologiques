@@ -5,6 +5,7 @@ This project, involving the transcription of Yves Ladegaillerie's thesis, was ca
 ## 
 
 - [ ] Transcription
+<br> [Releases](https://github.com/carmonamateo/decoupes-et-isotopies-de-surfaces-topologiques/releases)
 - [ ] Proofread
 - [ ] Preprint
 
