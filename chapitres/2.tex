@@ -162,14 +162,32 @@ Si de plus, $X$ est orientée, et si dans la construction précédente $h$ ne re
 \subsection*{3. Isotopie à un plongement P.L.. Problèmes d'intersections.}
 \addcontentsline{toc}{subsection}{3. Isotopie à un plongement P.L.. Problèmes d'intersections}
 
-{\bf 3.1}. ---
-
-
-
+{\bf 3.1}. --- Soit $\alpha$ une injection continue $I \to X$, où $X$ est une surface à bord munie d'une structure ``linéaire par morceaux'' (encore appelée structure P.L.~: ``piece wise-linear'')~; soient $x_0 \in \alpha(]0,1[)$ et $D$ un disque P.L. voisinage de $x_0$ dans $X$, ne rencontrant ni $\alpha(0)$, ni $\alpha(1)$. Il est possible de trouver $a,b \in \alpha(I)$ tels que la partie $[a,b]$ de $\alpha(I)$ vérifie $[a,b] \cap \partial D = \{a,b\}$ et $[a,b] \subset D$ (en effet, il suffit de suivre $\alpha(I)$ à partir de $x_0$ dans un sens (puis dans l'autre) jusqu'au ``premier'' point situé sur $\partial D$). Soient $t_1 = \alpha^{-1}(a)$, $t_2 = \alpha^{-1}(b)$ et $\beta : [t_1,t_2] \to D$ une injection continue P.L. telle que
+$$
+\beta(t_1) = a, \quad \beta(t_2) = b, \quad \partial D \cap \beta([t_1,t_2]) = \{ a,b \}.
+$$
 \vskip .3cm
-{\bf 3.2}. ---
+\begin{minipage}{\linewidth}
+    \centering
+    \includegraphics[width=90mm,scale=1]{figs/5.png}
+\end{minipage}
+\vskip .3cm
+Appliquant le corollaire {\bf 2.1.2.} au théorème de Schoenflies, on peut trouver un homéomorphisme $h$ de $D$ sur $D$ tel que $h|{\partial D} = \id_{\partial D}$ et $h \circ \beta = \alpha|{[t_1, t_2]}$.
 
+Il résulte alors du théorème d'Alexander (sur la connexité par arcs de $\Aut^+ D$, cf. IV {\bf 1.1.}), que $h$ est isotope à l'identité par isotopie fixe sur $\partial D$. Il existe donc une isotopie de $D$, fixe sur $\partial D$, transformant $\alpha|{[t_1,t_2]}$ en $\beta$. Cette isotopie s'étend (par $\id_{X \setminus D}$) en une isotopie ambiante de $X$, fixe en dehors de $D$, qui transforme $\alpha$ en $\alpha'$, où $\alpha'|{[t_1,t_2]}$ est linéaire par morceaux.
 
+N.B~: la notion d'isotopie ambiante est rappelée en IV.2.1.
+\vskip .3cm
+{\bf 3.2}. --- Par une technique analogue à celle de 3.1. on peut montrer que toute injection continue $\alpha$ de $I$ dans la surface à bord $X$ (telle que $\alpha(I) \cap \partial X = \{\alpha(0),\alpha(1)\}$) est isotope (par isotopie ambiante de $X$) à une injection continue P.L. On peut démontrer la propriété analogue pour les plongements de $\mathbb{S}^1$ dans $X$ ($S^1$ étant muni d'une structure P.L.)~; on pourrait aussi généraliser ce résultat au cas des plongements d'un $1$-complexe topologique compact $K$ (muni d'une structure P.L.) dans $X$, mais comme nous n'utiliserons pas cette propriété générale, nous ne la démontrons pas.
+
+Dans le cas $K = I$, $K = \mathbb{S}^1$, nous renvoyons à la démonstration de D.B.A. Epstein (cf. [32]). En fait nous utiliserons seulement les deux conséquences immédiates suivantes également énoncées par D.B.A. Epstein dans [32]~:
+\vskip .3cm
+{
+Lemme d'intersection pour $\mathbb{S}^1$. {\bf 3.2.1.} --- \it Étant donné deux plongement $i_0$ et $i_1$ de $S^1$ dans une surface à bord $X$, il existe une isotopie ambiante de $X$, fixe sur $\partial X$, transformant le plongement $i_1$ en $i'_1$ tel que les images $\gamma_0$ de $i_0$ et $\gamma'_1$ de $i'_1$ ne présentent qu'un nombre fini de points d'intersection en lesquels $\gamma_0$ et $\gamma'_1$ sont topologiquement transversales.
+}
+\vskip .3cm
+Lemme d'intersection pour $I$. {\bf 3.2.2.} --- \it Étant donné deux injections continues de $I$ dans une surface à bord $X$, d'images respectives $\gamma_0$ et $\gamma_1$ telles que $\partial\gamma_i = \gamma_i \cap \partial X$ ($i = 0, 1$), il existe une isotopie ambiante de $X$, fixe sur $\partial X$, transformant $i_1$ en $i'_1$ tel que $\gamma_0$ et $\gamma'_1$ (image de $i'_1$) ne présentent qu'un nombre fini de points d'intersection en lesquels $\gamma_0$ et $\gamma'_1$ sont topologiquement transversales.
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{4. Ordres circulaires induits par un plongement de 1-complexe.}
@@ -182,7 +200,7 @@ Si de plus, $X$ est orientée, et si dans la construction précédente $h$ ne re
 \vskip .3cm
 \begin{minipage}{\linewidth}
     \centering
-    \includegraphics[width=90mm,scale=1]{figs/4.png}
+    \includegraphics[width=80mm,scale=1]{figs/4.png}
 \end{minipage}
 \vskip .3cm
 
