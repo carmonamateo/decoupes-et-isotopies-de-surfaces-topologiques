@@ -194,29 +194,36 @@ Lemme d'intersection pour $I$. {\bf 3.2.2.} --- \it Étant donné deux injection
 \subsection*{4. Ordres circulaires induits par un plongement de 1-complexe.}
 \addcontentsline{toc}{subsection}{4. Ordres circulaires induits par un plongement de 1-complexe}
 
-{\bf 4.1}. ---
+{\bf 4.1}. --- Nous considérons toujours un $1$-complexe $K$ compact et un plongement $i$ de $K$ dans une surface $X$ à bord ; $X$ est maintenant supposée orientée au voisinage d'un sommet $i(x)$ de $i(K)$, de degré $n \ge 3$ : on se donne pour cela un ouvert $U$ de $X$, $U$ contenant $i(x)$ et orienté. Prenons une carte $(D,h)$ adaptée à $i$ en $i(x)$ avec $D \subset U$. On a donc $h(D \cap i(K)) = \overline{\operatorname{St}}_n$ et $h$ est un homéomorphisme orienté de $D$ (orienté par $U$) sur $B(0;1)$ orienté de façon standard.
 
+L'ensemble des branches de l'étoile standard $\overline{\operatorname{St}}_n$ (une branche est une composante connexe de $\operatorname{\text{St}}_n \setminus \{0\}$) est ordonné circulairement par l'orientation standard de $\mathbb{S}^1$ (qui est induite par celle de $B(0; 1)$).
 
+On en déduit grâce à $h$ un ordre circulaire sur l'ensemble des composantes connexes de $D \cap i(K) \setminus \{i(x)\}$ et comme cet ensemble est en bijection, grâce à $i$, avec l'ensemble des arcs de $K$ issus de $x$, on obtient un ordre circulaire sur ce dernier. Si $a_1, a_2, \dots, a_n$ sont les $n$ arcs issus de $x$ dans l'ordre circulaire qu'on vient de définir et si $p_j = i(a_j) \cap \partial D$, $(i = 1, 2, \dots, n)$, les points $p_1, p_2, \dots, p_n$ sont rangés dans cet ordre circulaire sur $\partial D$ orienté.
 
+Montrons que cet ordre circulaire ne dépend pas de la carte adaptée choisie et, pour cela, que si $(D',h')$ est une autre carte adaptée à $i$ en $i(x)$ on obtient le même ordre circulaire. On peut supposer que $D' \subset \operatorname{int} D$ (car si ce n'est pas le cas on pourra toujours remplacer $(D',h')$ par $(D'',h'')$ tel que $D'' \subset D \cap D'$). Les homéomorphismes $h$ et $h'$ sont orientés. On étudie la situation lue dans la carte $(D,h)$. Soit $\gamma = h(\partial D')$, $\gamma$ est orientée.
 \vskip .3cm
 \begin{minipage}{\linewidth}
     \centering
     \includegraphics[width=80mm,scale=1]{figs/4.png}
 \end{minipage}
 \vskip .3cm
+Soient $q_1, q_2, \dots, q_n$ (dans cet ordre circulaire) les images de $p_1, p_2, \dots, p_n$, et extrémités des branches $b_1, b_2, \dots, b_n$ correspondantes de $\overline{\operatorname{St}}_n$. Soient $r_1, r_2, \dots, r_n$ les intersections $r_i = \gamma \cap b_i$. ($\gamma \cap b_i$ est réduit à un point car $(D',h')$ est adaptée).
 
-
-
-
+Il faut montrer que les points $r_1, r_2, \dots, r_n$ sont rangés dans cet ordre circulaire sur $\gamma$ orientée. Or c'est évident par le \emph{théorème de Jordan} car si on avait un $r_k \in [r_i, r_{i+1}]$ sur $\gamma$ ($k \neq i, k \neq i+1$) la branche $b_k$, en allant de $0$ à $q_k$ et passant par $r_k$ couperait nécessairement soit $b_i$, soit $b_{i+1}$, soit $[q_i, q_{i+1}]$, ce qui est impossible.
 \vskip .3cm
-{\bf 4.2}. ---
-
-
-
+{\bf 4.2}. --- On a donc démontré~:
 \vskip .3cm
-{\bf 4.3}. ---
-
-
+{
+Théorème. --- \it Soient $i$ un plongement d'un $1$-complexe compact $K$ dans une surface à bord $X$, $x$ un sommet de $K$. Si $X$ est orientée au voisinage de $i(x)$, le plongement $i$ induit de façon canonique (décrite en {\bf 4.1.}) un ordre circulaire $\omega_x$ sur l'ensemble des arcs de $K$ issus de $x$. Si $X$ est orientée, on obtient ainsi une famille $(\omega_x)_{x \in S}$ ($S =$~ensemble des sommets de $K$) d'ordres circulaires induits.
+}
+\vskip .3cm
+{\bf 4.3}. --- conservation par homéomorphisme orienté de l'ordre circulaire induit.
+\vskip .3cm
+{
+Proposition. --- \it Soient $K$ un $1$-complexe compact, $X$ et $X'$ deux surfaces à bord orientées, $i$ un plongement de $K$ dans $X$ et $f$ un homéomorphisme orienté de $X$ sur $X'$. Les ordres circulaires induits sur l'ensemble des arcs de $K$ issus d'un même sommet $x$ de $K$ par les plongements $i$ et $i' = f \circ i$ sont identiques.
+}
+\vskip .3cm
+Démonstration. --- immédiat par transport de structure.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{5. Découpe d'un espace topologique suivant un fermé.}
