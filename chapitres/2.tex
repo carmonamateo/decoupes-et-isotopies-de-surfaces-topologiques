@@ -223,20 +223,60 @@ Théorème. --- \it Soient $i$ un plongement d'un $1$-complexe compact $K$ dans 
 Proposition. --- \it Soient $K$ un $1$-complexe compact, $X$ et $X'$ deux surfaces à bord orientées, $i$ un plongement de $K$ dans $X$ et $f$ un homéomorphisme orienté de $X$ sur $X'$. Les ordres circulaires induits sur l'ensemble des arcs de $K$ issus d'un même sommet $x$ de $K$ par les plongements $i$ et $i' = f \circ i$ sont identiques.
 }
 \vskip .3cm
-Démonstration. --- immédiat par transport de structure.
+Démonstration. Immédiat par transport de structure.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{5. Découpe d'un espace topologique suivant un fermé.}
 \addcontentsline{toc}{subsection}{5. Découpe d'un espace topologique suivant un fermé}
 
-{\bf 5.1}. ---
+Nous allons définir un outil qui sera très utile dans la suite et qui a pour but de donner une définition mathématique de la notion intuitive de découpe d'une surface suivant un $1$-complexe plongé (avec une paire de ciseaux~!). On donne, en fait, une construction fonctorielle générale.
 
+{\bf 5.1}. --- Si $X$ est un espace topologique et $x$ un point de $X$, on notera dans la suite $\mathcal{V}(x)$ le filtre des voisinages de $x$ dans $X$. Si $K$ est un fermé de $X$, $K$ contenant $x$, la famille des $\pi_0(V \setminus V \cap K)$, pour $V \in \mathcal{V}(x)$, munie des $\pi_0(i_{V,V'})$ (où $i_{V,V'}$ désigne l'inclusion canonique de $V$ dans $V'$, pour tout couple $(V,V')$ de $\mathcal{V}(x) \times \mathcal{V}(x)$ tel que $V \subset V'$), est un système projectif dont on désignera la limite projective $\varprojlim_{V \in \mathcal{V}(x)} \pi_0(V \setminus V \cap K)$ par $\pi(X, K ; x)$.
 \vskip .3cm
-{\bf 5.2}. ---
-
-
+{\bf 5.2}. --- On se donne maintenant un couple $(X,K)$ fixé, où $X$ est un espace topologique et $K$ un fermé de $X$. On considère alors la catégorie $\mathcal{C}$ ayant pour objets les couples $(X',f')$ où $X'$ est un espace topologique, $f' : X' \to X$ une application continue, couples tels que si on note $K' = {f'}^{-1}(K)$, alors pour tout élément $x'$ de $K'$ on a~:
+$$
+\operatorname{Card} \pi(X', K'; x') = 1
+$$
+Un $\mathcal{C}$-morphisme entre deux objets $(X',f')$ et $(X'',f'')$ de $\mathcal{C}$ est une application continue $\varphi : X' \to X''$ telle que le diagramme suivant soit commutatif~:
+\[\begin{tikzcd}
+	{X'} && {X''} \\
+	& X
+	\arrow["\varphi", from=1-1, to=1-3]
+	\arrow["{f'}"', from=1-1, to=2-2]
+	\arrow["{f''}", from=1-3, to=2-2]
+\end{tikzcd}\]
 \vskip .3cm
-{\bf 5.3}. ---
+{
+Théorème et définition. --- \it $\mathcal{C}$ possède un objet final $(X_0,f_0)$, unique à isomorphismes (unique) près. Cet objet sera appelé \textup{Découpe de $X$ suivant $K$}.
+}
+\vskip .3cm
+{\bf 5.3}. --- Démonstration de 5.2.
+
+Dans la suite, pour simplifier les notations, si $A$ et $B$ sont deux ensembles on notera $A-B$ l'ensemble des éléments de $A$ qui ne sont pas dans $B$, la notation $A \smallsetminus B$ étant réservée aux couples $(A,B)$ tels que $B \subset A$. C'est ainsi qu'on a : $A-B = A \smallsetminus B \cap A$.
+\vskip .3cm
+{\bf 5.3.1.} Construction de $X_0$ et de sa topologie.
+
+Soit $K_0 = \amalg_{x \in K} \pi(X, K; x)$. On définit alors $X_0$ comme étant la réunion disjointe : $(X \smallsetminus K) \sqcup K_0$ (On a donc $X \smallsetminus K = X_0 \smallsetminus K_0$). Il reste à munir $X_0$ d'une topologie, ce qu'on fait en donnant une base d'ouverts (appelés \emph{ouverts spéciaux})~: à tout couple $(U,V)$, où $U$ est un ouvert de $X$ et $V$ une partie ouverte et fermée de $U-K$ (donc $V$ est réunion de composantes connexes de $U-K$) on associe l'\emph{ouvert spécial} $\mathcal{O}(U,V) = V \sqcup (\amalg_{x \in K \cap U} \pi'_V(X,K;x))$, où on note $\pi'_V(X,K;x)$ l'image de l'application~: $\varprojlim_{W \in \mathcal{V}(x)} \pi_0(W \cap V - K) \longrightarrow \varprojlim_{W \in \mathcal{V}(x)} \pi_0(W - K)$ induite par l'injection canonique de $W \cap V - K$ dans $W - K$ (Noter qu'il suffit de considérer les $W$ contenus dans $U$). Un ouvert de $X_0$ est alors défini comme une réunion quelconque d'ouverts spéciaux. Montrons que cela définit bien une topologie~: il suffit de vérifier que si $\mathcal{O}(U,V)$ et $\mathcal{O}(U',V')$ sont deux ouverts spéciaux, on a~:
+$$
+\mathcal{O}(U,V) \cap \mathcal{O}(U',V') = \mathcal{O}(U \cap U', V \cap V').
+$$
+(Le second membre a un sens car $U \cap U'$ est un ouvert de $X$, et $V \cap V'$ une partie ouverte et fermée de $U \cap U'-K$). Montrons d'abord l'inclusion $\mathcal{O}(U,V) \cap \mathcal{O}(U',V') \subset \mathcal{O}(U \cap U', V \cap V')$, et pour cela soit $x$ élément du premier membre, alors si $x \in V \cap V'$, $x$ est dans $\mathcal{O}(U \cap U', V \cap V')$ et si $x \notin V \cap V'$ c'est que $x \in \pi'_V(X, K; z) \cap \pi'_{V'}(X, K; z)$ pour un certain $z \in K \cap U \cap U'$~; dans ce dernier cas il faut montrer que $x \in \pi'_{V \cap V'}(X, K; z)$.
+
+Or on a le diagramme commutatif~:
+\[\begin{tikzcd}
+	& {\varprojlim_{W \in \mathcal{V}(z)}\pi_0(W \cap V \cap V' - K)} & \\
+	{\varprojlim_{W \in \mathcal{V}(z)}\pi_0(W \cap V - K)} && {\varprojlim_{W \in \mathcal{V}(z)}\pi_0(W \cap V' - K)} \\
+	& {\varprojlim_{W \in \mathcal{V}(z)}\pi_0(W-K)}
+	\arrow["i"', from=1-2, to=2-1]
+	\arrow["{i'}", from=1-2, to=2-3]
+	\arrow["g", from=1-2, to=3-2]
+	\arrow["f"', from=2-1, to=3-2]
+	\arrow["{f'}", from=2-3, to=3-2]
+\end{tikzcd}\]
+et ce qu'on cherche à démontrer est conséquence immédiat de lemme~:
+
+
+
 
 
 \vskip .3cm
