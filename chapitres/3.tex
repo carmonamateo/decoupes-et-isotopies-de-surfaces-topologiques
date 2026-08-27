@@ -66,13 +66,26 @@ Si $(k,\omega)$ et $(k',\omega')$ sont deux 1-complexes combinatoires circularis
     ($\omega_x^{-1}$ désigne l'inverse de l'ordre circulaire $\omega_x$, cf. II.1.6.).
 \end{enumerate}
 
-Par définition, un \emph{circuit} de $(k,\omega)$ (ou encore un \emph{$\omega$-circuit} de $k$) est une orbite de $\varphi_\omega$ (Noter que toute boucle isolée, tout point isolé est un circuit). On notera $F(k,\omega)$ l'ensemble des circuits de $(k,\omega)$, ils définissent une partition de $E$. 
+%\vskip .3cm
+%\begin{minipage}{\linewidth}
+%    \centering
+%    \includegraphics[width=90mm,scale=1]{figs/5.png}
+%\end{minipage}
+%\vskip .3cm
+Par définition, un \emph{circuit} de $(k, \omega)$ (ou encore un $\omega$-circuit de $k$) est une orbite de $\varphi_\omega$ (Noter que toute boucle isolée, tout point isolé est un circuit). On notera $F(k, \omega)$ l'ensemble des circuits de $(k,\omega)$, ils définissent une partition de $E$. 
 \vskip .3cm
 {\bf 1.5.2}. --- Soit maintenant $(K,\omega)$ un 1-complexe topologique (compact) circularisé et soit $(k,\omega) = \mathcal{C}(K,\omega)$ (cf. 1.4.).
 
 On considère le 1-complexe topologique orienté (i.e. dont chacune des arêtes est munie d'une orientation) réunion disjointe des arcs et des sommets isolés de $K$. On réunit et on recolle ses différentes composantes connexes selon la loi :
 
 Pour tout arc $a$ (avec source) de $K$, soit $\tilde{b}(a)$ le but de $a$ (cf. I.1.2.), $x = b(a)$ le but de $a$ dans $K$, $a' = \omega_x^{-1}(\sigma(a))$ l'arc, on identifie le point $\tilde{b}(a)$ de $a$ avec le point $\tilde{s}(a')$ de $a'$ ($\tilde{s}(a')$ est la source de $a'$, cf. I.1.2.).
+
+%\vskip .3cm
+%\begin{minipage}{\linewidth}
+%    \centering
+%    \includegraphics[width=90mm,scale=1]{figs/5.png}
+%\end{minipage}
+%\vskip .3cm
 
 L'espace quotient ainsi obtenu, muni de la partie finie formée par l'ensemble des points $\tilde{s}(a)$ (où $a$ décrit l'ensemble des arcs avec source de $K$) et des sommets isolés de $K$ est un 1-complexe topologique compact orienté qu'on notera $\Gamma(K,\omega)$ et qu'on appellera \emph{1-complexe topologique des circuits de $(K,\omega)$}.
 
@@ -120,21 +133,25 @@ De $b$ on déduit également de façon canonique un isomorphisme $\gamma(b)$ de 
 
 Si $(K,\omega)$ et $(K',\omega')$ sont deux 1-complexes topologiques circularisés (objets de $KT$) et $h$ un isomorphisme (de $KT$) entre $(K,\omega)$ et $(K',\omega')$, alors $h$ induit un isomorphisme $\tilde{h}$ du 1-complexe topologique orienté réunion disjointe des arcs et sommets isolés de $K$ sur le 1-complexe topologique orienté réunion disjointe des arcs et sommets isolés de $K'$. Cet $\tilde{h}$ passe au quotient par les opérations de recollement qui permettent de définir $\Gamma(K,\omega)$ et $\Gamma(K',\omega')$, et induit un isomorphisme $\Gamma(h)$ (de 1-complexes topologiques orientés) entre $\Gamma(K,\omega)$ et $\Gamma(K',\omega')$. Ce dernier isomorphisme induit une bijection entre les ensembles de composantes connexes de $\Gamma(K,\omega)$ et $\Gamma(K',\omega')$, bijection qu'on notera $F(h) : F(K,\omega) \cong F(K',\omega')$.
 
-Bien entendu, si $(k,\omega) = c(K,\omega)$ et $(k',\omega') = c(K',\omega')$ (cf. 1.4. pour la définition du foncteur), les deux diagrammes suivants sont commutatifs :
-\[
-\begin{array}{ccc}
-F(K,\omega) & \xrightarrow{F(h)} & F(K',\omega') \\
-\downarrow & & \downarrow \\
-F(k,\omega) & \xrightarrow{F(b)} & F(k',\omega')
-\end{array}
-\]
-\[
-\begin{array}{ccc}
-c(\Gamma(K,\omega)) & \longrightarrow & \gamma(k,\omega) \\
-\downarrow{c(\Gamma(h))} & & \downarrow{\gamma(b)} \\
-c(\Gamma(K',\omega')) & \longrightarrow & \gamma(k',\omega')
-\end{array}
-\]
+Bien entendu, si $(k,\omega) = c(K,\omega)$ et $(k',\omega') = c(K',\omega')$ 
+
+(cf. 1.4. pour la définition du foncteur $\curvedarrow{c}$), les deux diagrammes suivants sont commutatifs~:
+\[\begin{tikzcd}
+	{F(K, \omega)} & {F(K',\omega')} \\
+	{F(k,\omega)} & {F(k',\omega')}
+	\arrow["{F(h)}", from=1-1, to=1-2]
+	\arrow["\wr"', from=1-1, to=2-1]
+	\arrow["\wr"', from=1-2, to=2-2]
+	\arrow["{F(\curvedarrow{a}(h))}", from=2-1, to=2-2]
+\end{tikzcd}\]
+\[\begin{tikzcd}
+	{c(\Gamma(K,\omega))} & {\gamma(k,\omega)} \\
+	{c(\Gamma(K',\omega'))} & {\gamma(k',\omega')}
+	\arrow["\sim", from=1-1, to=1-2]
+	\arrow["{c(\Gamma(h))}"', from=1-1, to=2-1]
+	\arrow["{\gamma(\curvedarrow{c}(h))}", from=1-2, to=2-2]
+	\arrow["\sim", from=2-1, to=2-2]
+\end{tikzcd}\]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{2. La catégorie des plongements comme produit 2-fibré.}
