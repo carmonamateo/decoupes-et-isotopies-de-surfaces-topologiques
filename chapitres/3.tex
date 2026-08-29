@@ -10,53 +10,49 @@
 
 Si $X, X'$ sont des espaces topologiques, $A, B$ des parties de $X$, et $A'$ une partie de $X'$, on notera~:
 \begin{itemize}
-    \item[] $\operatorname{Isom}(X,X';A,A')$~: l'espace des homéomorphismes $h$ de $X$ sur $X'$ tels que $h(A) = A'$.
-    \item[] $\operatorname{Aut}(X;A;\operatorname{id}_B)$~: l'espace des homéomorphismes $h$ de $X$ sur lui-même tels que $h(A) = A$ et $h|B = \operatorname{id}_B$.
+    \item[] $\operatorname{Isom}(X,X'; A,A')$~: l'espace des homéomorphismes $h$ de $X$ sur $X'$ tels que $h(A) = A'$.
+    \item[] $\operatorname{Aut}(X;A; \operatorname{id}_B)$~: l'espace des homéomorphismes $h$ de $X$ sur lui-même tels que $h(A) = A$ et $h|B = \operatorname{id}_B$.
 \end{itemize}
 Si $X$ et $X'$ sont des variétés à bord orientées, on notera~:
 \begin{itemize}
-    \item $\operatorname{Isom}^+(X, X')$~: l'espace des homéomorphismes orientés (i.e. conservant l'orientation) de $X$ sur $X'$ (ou encore $\operatorname{Aut}_+$ si $X = X'$).
+    \item[] $\operatorname{Isom}^+(X, X')$~: l'espace des homéomorphismes orientés (i.e. conservant l'orientation) de $X$ sur $X'$ (ou encore $\operatorname{Aut}_+$ si $X = X'$).
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{1. Les 1-complexes circularisés.}
 \addcontentsline{toc}{subsection}{1. Les 1-complexes circularisés}
 
-{\bf 1.1}. --- On appelle \emph{circularisation} d'un 1-complexe topologique compact $K$ (dont l'ensemble des sommets est $S$) la donnée d'une famille $\omega = (\omega_x)_{x \in S}$ où, pour tout $x \in S$, $\omega_x$ est un ordre circulaire (cf. II.1.6.) sur l'ensemble des arcs issus de $x$ (Rappelons que si $a$ est un tel arc, $\omega_x(a)$ désigne alors le suivant de $a$). Le couple $(K,\omega)$ est appelé \emph{1-complexe topologique circularisé}.
+{\bf 1.1}. --- On appelle \emph{circularisation} d'un 1-complexe topologique compact $K$ (dont l'ensemble des sommets est $S$) la donnée d'une famille $\omega = (\omega_x)_{x \in S}$ où, pour tout $x \in S$, $\omega_x$ est un ordre circulaire (cf. II.1.6.) sur l'ensemble des arcs issus de $x$ (Rappelons que si $a$ est un tel arc, $\omega_x(a)$ désigne alors le \emph{suivant} de a). Le couple $(K, \omega)$ est appelé \emph{1-complexe topologique circularisé}.
 
-On obtient de façon analogue les notions de circularisation d'un 1-complexe combinatoire $k$, et de \emph{1-complexe combinatoire circularisé} $(k,\omega)$ : il suffit pour cela de remplacer ci-dessus, dans les définitions, le mot topologique par combinatoire.
+On obtient de façon analogue les notions de \emph{circularisation} d'un 1-complexe combinatoire $k$, et de \emph{1-complexe combinatoire circularisé} $(k,\omega)$~: il suffit pour cela de remplacer ci-dessus, dans les définitions, le mot ``topologique'' par ``combinatoire''.
 
 La notion de graphe circularisé a été étudiée par Edmonds puis Ringel (cf. [31], [90]) dans un contexte de pure théorie des graphes, et avec une terminologie différente. Elle conduit à un algorithme pour déterminer le genre d'un graphe et a permis d'apporter une solution au problème de coloration de Heawood (cf. [91]).
-
 \vskip .3cm
-{\bf 1.2}. --- Si $(K,\omega)$ est un 1-complexe circularisé et $h$ un homéomorphisme de $K$ sur un autre 1-complexe $K'$, on obtient une circularisation $\omega'$ sur $K'$, dite \emph{transportée de $\omega$ par $h$}, notée $h_*(\omega)$, en définissant pour tout sommet $x'$ de $K'$, et pour tout arc $a'$ de $K'$ issus de $x'$ :
-\[
+{\bf 1.2}. --- Si $(K, \omega)$ est un 1-complexe circularisé et $h$ un homéomorphisme de $K$ sur un autre 1-complexe $K'$, on obtient une circularisation $\omega'$ sur $K'$, dite \emph{transportée de $\omega$ par $h$}, notée $h_*(\omega)$, en définissant pour tout sommet $x'$ de $K'$, et pour tout arc $a'$ de $K'$ issus de $x'$~:
+$$
 \omega'_{x'}(a') = A(h)(\omega_x(a))
-\]
+$$
 (où $x = h^{-1}(x')$, $a = A(h)^{-1}(a')$, $A(h)$ désignant la bijection induite entre l'ensemble des arcs de $K$ et l'ensemble des arcs de $K'$, cf. I.1.4.).
 
-Comme $S(h)$ et $A(h)$ (cf. I.1.4.) ne dépendent que de la classe d'isotopie de $h$ dans $\text{Isom}(K,K')$ (cf. I.1.5.), $\omega'$ ne dépend que de $\bar{h}$ de $\omega$ ; on notera également $\omega' = \bar{h}_*(\omega)$.
+Comme $S(h)$ et $A(h)$ (cf. I.1.4.) ne dépendent que de la classe d'isotopie de $h$ dans $\operatorname{Isom}(K, K')$ (cf. I.1.5.), $\omega'$ ne dépend que de $\bar{h}$ de $\omega$~; on notera également $\omega' = \bar{h}_*(\omega)$.
 
-Si $(K,\omega)$ et $(K',\omega')$ sont deux 1-complexes circularisés et $f$ un isomorphisme de $K$ sur $K'$, on dira que $f$ \emph{respecte les circularisations} si $f_*(\omega) = \omega'$ : cette propriété ne dépend que de la classe d'isotopie $\bar{f}$ de $f$ dans $\text{Isom}(K,K')$.
+Si $(K,\omega)$ et $(K',\omega')$ sont deux 1-complexes circularisés et $f$ un isomorphisme de $K$ sur $K'$, on dira que $f$ \emph{respecte les circularisations} si $f_*(\omega) = \omega'$~: cette propriété ne dépend que de la classe d'isotopie $\bar{f}$ de $f$ dans $\operatorname{Isom}(K,K')$.
 
-La catégorie $\overline{KT}$ dont les objets sont les 1-complexes topologiques circularisés (compacts), et dont les morphismes sont les isomorphismes de 1-complexes, respectant les circularisations, sera appelée \emph{catégorie des 1-complexes topologiques circularisés}.
+La catégorie $\curvedarrow{\KT}$ dont les objets sont les 1-complexes topologiques circularisés (compacts), et dont les morphismes sont les isomorphismes de 1-complexes, respectant les circularisations, sera appelée \emph{catégorie des 1-complexes topologiques circularisés}.
 
-De même, la catégorie $Kt$ ayant mêmes objets que $\overline{KT}$ et pour morphismes les classes d'isotopie d'isomorphisme de 1-complexes respectant les circularisations, sera appelée \emph{catégorie isotopique des 1-complexes topologiques}.
-
+De même, la catégorie $\curvedarrow{\Kt}$ ayant mêmes objets que $\curvedarrow{\KT}$ et pour morphismes les classes d'isotopie d'isomorphisme de 1-complexes respectant les circularisations, sera appelée \emph{catégorie isotopique des 1-complexes topologiques}.
 \vskip .3cm
-{\bf 1.3}. --- Si $k$ et $k'$ ($k = (S,A,B,\sigma,s)$, $k' = (S',A',B',\sigma',s')$) sont deux 1-complexes combinatoires, $\omega$ une circularisation de $k$, et $b = (\varphi,\psi)$ un isomorphisme de 1-complexes combinatoires (cf. I.2.2.) de $k$ sur $k'$, on définit de façon analogue à 1.2. la circularisation $\omega' = b_*(\omega)$ transportée de $\omega$ par $b$ en posant pour tout arc $a$ de $k$, de source $x$ :
-\[
+{\bf 1.3}. --- Si $k$ et $k'$ ($k = (S, A, B, \sigma, s)$, $k' = (S', A', B', \sigma', s')$) sont deux 1-complexes combinatoires, $\omega$ une circularisation de $k$, et $b = (\varphi,\psi)$ un isomorphisme de 1-complexes combinatoires (cf. I.2.2.) de $k$ sur $k'$, on définit de façon analogue à 1.2. la circularisation $\omega' = b_*(\omega)$ \emph{transportée de $\omega$ par $b$} en posant pour tout arc $a$ de $k$, de source $x$~:
+$$
 \omega'_{\varphi(x)}(\psi(a)) = \psi(\omega_x(a))
-\]
-Si $(k,\omega)$ et $(k',\omega')$ sont deux 1-complexes combinatoires circularisés, un isomorphisme $b$ de $k$ sur $k'$ est dit respecter les circularisations si $b_*(\omega) = \omega'$. La catégorie $kc$ dont les objets sont les 1-complexes combinatoires circularisés et dont les morphismes sont les $kc$-isomorphismes respectant les circularisations est dite \emph{catégorie des 1-complexes combinatoires circularisés}.
-
+$$
+Si $(k,\omega)$ et $(k',\omega')$ sont deux 1-complexes combinatoires circularisés, un isomorphisme $b$ de $k$ sur $k'$ est dit respecter les circularisations si $b_*(\omega) = \omega'$. La catégorie $\curvedarrow{\kc}$ dont les objets sont les 1-complexes combinatoires circularisés et dont les morphismes sont les $kc$-isomorphismes respectant les circularisations est dite \emph{catégorie des 1-complexes combinatoires circularisés}.
 \vskip .3cm
-{\bf 1.4}. --- Le foncteur équivalence canonique $C$ de $Kt$ dans $kc$ (cf. I.3.1.) induit, de façon évidente, une équivalence (foncteur représentation combinatoire) entre $Kt$ et $kc$, dont un quasi-inverse est le foncteur $r$ (réalisation topologique) de $kc$ sur $Kt$ induit par $r : \mathcal{C} \approx Kt$ (cf. I.3.2.).
-
+{\bf 1.4}. --- Le foncteur équivalence canonique $C$ de $\Kt$ dans $\kc$ (cf. I.3.1.) induit, de façon évidente, une équivalence $\curvedarrow{c}$ (foncteur ``représentation combinatoire'') entre $\curvedarrow{\Kt}$ et $\curvedarrow{\kc}$, dont un quasi-inverse est le foncteur $\curvedarrow{r}$ (``réalisation topologique'') de $\curvedarrow{\kc}$ sur $\curvedarrow{\Kt}$ induit par $r : \kc \xrightarrow{\approx} \Kt$ (cf. I.3.2.).
 \vskip .3cm
 {\bf 1.5}. --- Les circuits d'un 1-complexe circularisé.
 \vskip .3cm
-{\bf 1.5.1}. --- Soit $(k,\omega)$ un 1-complexe combinatoire circularisé ($k = (S,A,B,\sigma,s)$), notons $S_0$ l'ensemble des sommets isolés de $k$, et $E = S_0 \amalg A$. On définit une permutation $\varphi_\omega$ de $E$ comme suit :
+{\bf 1.5.1}. --- Soit $(k,\omega)$ un 1-complexe combinatoire circularisé ($k = (S, A, B, \sigma, s)$), notons $S_0$ l'ensemble des sommets isolés de $k$, et $E = S_0 \amalg A$. On définit une permutation $\varphi_\omega$ de $E$ comme suit :
 \begin{enumerate}
     \item $\varphi_\omega$ est l'identité sur $S_0 \amalg B$.
     \item si $a$ est un arc de $A \setminus B$ ayant $x$ pour but dans $k$ (i.e. $s(\sigma(a)) = x$, cf. I.2.1.), on pose :
