@@ -53,65 +53,62 @@ Si $(k,\omega)$ et $(k',\omega')$ sont deux 1-complexes combinatoires circularis
 {\bf 1.5}. --- Les circuits d'un 1-complexe circularisé.
 \vskip .3cm
 {\bf 1.5.1}. --- Soit $(k,\omega)$ un 1-complexe combinatoire circularisé ($k = (S, A, B, \sigma, s)$), notons $S_0$ l'ensemble des sommets isolés de $k$, et $E = S_0 \amalg A$. On définit une permutation $\varphi_\omega$ de $E$ comme suit :
-\begin{enumerate}
-    \item $\varphi_\omega$ est l'identité sur $S_0 \amalg B$.
-    \item si $a$ est un arc de $A \setminus B$ ayant $x$ pour but dans $k$ (i.e. $s(\sigma(a)) = x$, cf. I.2.1.), on pose :
-    \[
+\begin{itemize}
+    \item[1)] $\varphi_\omega$ est l'identité sur $S_0 \amalg B$.
+    \item[2)] si $a$ est un arc de $A \setminus B$ ayant $x$ pour but dans $k$ (i.e. $s(\sigma(a)) = x$, cf. I.2.1.), on pose~:
+    $$
     \varphi_\omega(a) = \omega_x^{-1}(\sigma(a))
-    \]
+    $$
     ($\omega_x^{-1}$ désigne l'inverse de l'ordre circulaire $\omega_x$, cf. II.1.6.).
-\end{enumerate}
-
-%\vskip .3cm
-%\begin{minipage}{\linewidth}
-%    \centering
-%    \includegraphics[width=90mm,scale=1]{figs/5.png}
-%\end{minipage}
-%\vskip .3cm
+\end{itemize}
+\vskip .3cm
+\begin{minipage}{\linewidth}
+    \centering
+    \includegraphics[width=90mm,scale=1]{figs/11.png}
+\end{minipage}
+\vskip .3cm
 Par définition, un \emph{circuit} de $(k, \omega)$ (ou encore un $\omega$-circuit de $k$) est une orbite de $\varphi_\omega$ (Noter que toute boucle isolée, tout point isolé est un circuit). On notera $F(k, \omega)$ l'ensemble des circuits de $(k,\omega)$, ils définissent une partition de $E$. 
 \vskip .3cm
-{\bf 1.5.2}. --- Soit maintenant $(K,\omega)$ un 1-complexe topologique (compact) circularisé et soit $(k,\omega) = \mathcal{C}(K,\omega)$ (cf. 1.4.).
+{\bf 1.5.2}. --- Soit maintenant $(K,\omega)$ un 1-complexe topologique (compact) circularisé et soit $(k,\omega) = \curvedarrow{c}(K,\omega)$ (cf. 1.4.).
 
-On considère le 1-complexe topologique orienté (i.e. dont chacune des arêtes est munie d'une orientation) réunion disjointe des arcs et des sommets isolés de $K$. On réunit et on recolle ses différentes composantes connexes selon la loi :
+On considère le 1-complexe topologique \emph{orienté} (i.e.~: dont chacune des arêtes est munie d'une orientation) réunion \emph{disjointe} des arcs et des sommets isolés de $K$. On réunit et on recolle ses différentes composantes connexes selon la loi~:
 
 Pour tout arc $a$ (avec source) de $K$, soit $\tilde{b}(a)$ le but de $a$ (cf. I.1.2.), $x = b(a)$ le but de $a$ dans $K$, $a' = \omega_x^{-1}(\sigma(a))$ l'arc, on identifie le point $\tilde{b}(a)$ de $a$ avec le point $\tilde{s}(a')$ de $a'$ ($\tilde{s}(a')$ est la source de $a'$, cf. I.1.2.).
-
-%\vskip .3cm
-%\begin{minipage}{\linewidth}
-%    \centering
-%    \includegraphics[width=90mm,scale=1]{figs/5.png}
-%\end{minipage}
-%\vskip .3cm
-
-L'espace quotient ainsi obtenu, muni de la partie finie formée par l'ensemble des points $\tilde{s}(a)$ (où $a$ décrit l'ensemble des arcs avec source de $K$) et des sommets isolés de $K$ est un 1-complexe topologique compact orienté qu'on notera $\Gamma(K,\omega)$ et qu'on appellera \emph{1-complexe topologique des circuits de $(K,\omega)$}.
+\vskip .3cm
+\begin{minipage}{\linewidth}
+    \centering
+    \includegraphics[width=90mm,scale=1]{figs/5.png}
+\end{minipage}
+\vskip .3cm
+L'espace quotient ainsi obtenu, muni de la partie finie formée par l'ensemble des points $\tilde{s}(a)$ (où $a$ décrit l'ensemble des arcs avec source de $K$) et des sommets isolés de $K$ est un 1-complexe topologique compact \emph{orienté} qu'on notera $\Gamma(K, \omega)$ et qu'on appellera \emph{1-complexe topologique des circuits} de $(K,\omega)$.
 
 Il existe une projection canonique de $\Gamma(K,\omega)$ sur $K$, induite par les projections canoniques $P_a$ de $a$ dans $K$ (cf. I.1.2.) (pour tout arc $a$ de $K$).
 
-Par construction, il est clair que l'ensemble des sommets de $\Gamma(K,\omega)$ est constitué par l'ensemble des sommets isolés de $K$ (ce sont aussi des sommets isolés de $\Gamma(K,\omega)$) réuni à un ensemble de sommets de degré 2 (à savoir : les $\tilde{s}(a)$). Par conséquent, à chaque arc $a$ de $K$ correspond (de façon bijective) une arête $a_\Gamma$ de $\Gamma(K,\omega)$ ; à cette arête sont associées deux arcs de $\Gamma(K,\omega)$ : d'une part $a_\Gamma$ munie de l'orientation induite par $a$, d'autre part $a_\Gamma$ munie de l'orientation inverse de celle induite par $a$ ; on en déduit une bijection canonique entre l'ensemble $A_\Gamma$ des arcs de $\Gamma(K,\omega)$ et l'ensemble $A \times \{1,-1\}$ (bijection qui à $a_\Gamma$ munie de l'orientation (resp. orientation inverse) de $a$, associe $(a,1)$ (resp. $(a,-1)$)).
+Par construction, il est clair que l'ensemble des sommets de $\Gamma(K,\omega)$ est constitué par l'ensemble des sommets isolés de $K$ (ce sont aussi des sommets isolés de $\Gamma(K,\omega)$) réuni à un ensemble de sommets de degré 2 (à savoir~: les $\tilde{s}(a)$). Par conséquent, à chaque arc $a$ de $K$ correspond (de façon bijective) une arête $a_\Gamma$ de $\Gamma(K,\omega)$~; à cette arête sont associées deux arcs de $\Gamma(K,\omega)$ : d'une part $a_\Gamma$ munie de l'orientation induite par $a$, d'autre part $a_\Gamma$ munie de l'orientation inverse de celle induite par $a$ ; on en déduit une bijection canonique entre l'ensemble $A_\Gamma$ des arcs de $\Gamma(K,\omega)$ et l'ensemble $A \times \{ 1, -1 \}$ (bijection qui à $a_\Gamma$ munie de l'orientation (resp. orientation inverse) de $a$, associe $(a,1)$ (resp. $(a,-1)$)).
 
 L'ensemble des composantes connexes de $\Gamma(K,\omega)$ sera noté $F(K,\omega)$, il est (de façon évidente, vu les opérations de recollement, et la définition 1.5.1.) en bijection canonique avec $F(k,\omega)$, par l'application qui à toute composante $\gamma$ de $\Gamma(K,\omega)$ associe l'ensemble des arcs de $K$ (ou sommets isolés de $K$) dont $\gamma$ est le recollement.
 \vskip .3cm
-{\bf 1.5.3}. --- Revenons au cas d'un 1-complexe combinatoire circularisé $(k,\omega)$ ($k = (S,A,B,\sigma,s)$, $S_0$ désignera l'ensemble des sommets isolés de $k$).
+{\bf 1.5.3}. --- Revenons au cas d'un 1-complexe combinatoire circularisé $(k,\omega)$ ($k = (S, A, B, \sigma, s)$, $S_0$ désignera l'ensemble des sommets isolés de $k$).
 
-On lui associe un 1-complexe combinatoire des circuits de $(k,\omega)$, noté $\gamma(k,\omega)$, qui est, par définition :
-\[
+On lui associe un \emph{1-complexe combinatoire des circuits de $(k,\omega)$}, noté $\gamma(k,\omega)$, qui est, par définition~:
+$$
 \gamma(k,\omega) = (S_0 \amalg A \setminus B, A \times \{1,-1\}, B \times \{1,-1\}, \sigma_\gamma, s_\gamma)
-\]
-où $\sigma_\gamma$ est l'application de $A \times \{1,-1\}$ dans lui-même définie par :
-\[
+$$
+où $\sigma_\gamma$ est l'application de $A \times \{1,-1\}$ dans lui-même définie par~:
+$$
 \forall (a,i) \in A \times \{1,-1\}, \quad \sigma_\gamma(a,i) = (a,-i)
-\]
+$$
 et où $s_\gamma$ est l'application de $(A \setminus B) \times \{1,-1\}$ dans $F(k,\omega)$ définie par :
-\[
+$$
 \forall (a,1) \in (A \setminus B) \times \{1,-1\}, \quad s_\gamma(a,1) = b(a)
-\]
+$$
 (rappelons que $b(a) = s(\sigma(a))$, cf. I.2.1.).
 \vskip .3cm
 {
 Proposition {\bf 1.5.4.} --- \it Si $(K,\omega)$ est un 1-complexe topologique circularisé, et si $c(K)$ est la représentation combinatoire de $K$, il existe un isomorphisme canonique de 1-complexes combinatoires :
-\[
-c(\Gamma(K,\omega)) = \gamma(c(K),\omega)
-\]    
+$$
+c(\Gamma(K,\omega)) \isommap \gamma(c(K),\omega)
+$$    
 }
 \vskip .3cm
 Démonstration. --- Comme en 1.5.2., notons $k = c(K)$. Il existe (cf. 1.5.2.) une bijection canonique entre l'ensemble $A_\Gamma$ des arcs de $\Gamma(K,\omega)$ et l'ensemble $A \times \{1,-1\}$ (où $A$ est l'ensemble des arcs de $K$). Il existe également une bijection canonique entre l'ensemble des sommets de $\Gamma(K,\omega)$ et l'ensemble $S_0 \amalg (A \setminus B)$ ($k = (S,A,B,\sigma,s)$ et si $S_0$ désigne l'ensemble des sommets isolés de $K$) (cf. 1.5.2. également). Le couple $b = (\varphi,\psi)$ est l'isomorphisme canonique annoncé entre $c(\Gamma(K,\omega))$ et $\gamma(k,\omega)$.
