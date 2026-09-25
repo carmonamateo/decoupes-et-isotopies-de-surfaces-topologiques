@@ -274,12 +274,38 @@ Or on a le diagramme commutatif~:
 	\arrow["{f'}", from=2-3, to=3-2]
 \end{tikzcd}\]
 et ce qu'on cherche à démontrer est conséquence immédiat de lemme~:
+\vskip.3cm
+{
+Lemme 5.3.1.1. --- $\it \operatorname{Img} = \operatorname{Imf} \cap \operatorname{Imf}'$ (i.e.~: $\pi'_{V \cap V'} (X, K; z) = \pi'_V(X, K; z) \cap \pi'_{V'} (X, K; z)$)
+}
+\vskip.3cm
+Démonstration du lemme. --- L'inclusion $\subset$ est évidente par commutativité du diagramme. On démontre l'inclusion inverse~: on peut supposer (puisque $z \in U \cap U'$) que les voisinages $W$ de $z$ qui interviennent sont des ouverts contenus dans $U \cap U'$~: cela ne change pas les limites projectives puisque ces voisinages forment un système cofinal de l'ensemble de tous les voisinages de $z$. On note $\mathcal{E}$ l'ensemble des voisinages ouverts $W$ ($W \subset U \cap U'$) de $z$ dans $X$.
 
+Soit alors $y = f(x) = f'(x')$, on a $x = (x_W)_{W \in \mathcal{E}}$ (où pour tout $W \in \mathcal{E}$, $x_W$ est une composante connexe de $(W - K) \cap V$), on a $x' = (x'_W)_{W \in \mathcal{E}}$ (où pour tout $W \in \mathcal{E}$, $x'_W$ est une composante connexe de $(W - K) \cap V'$), et on a $y = (y_W)_{W \in \mathcal{E}}$ (où pour tout $W \in \mathcal{E}$, $y_W$ est une composante connexe de $W - K$). De plus, comme $y = f(x) = f'(x')$, on a pour tout $W \in \mathcal{E}$ : $x_W \subset y_W$, $x'_W \subset y_W$ ; comme $(W - K) \cap V$, $(W - K) \cap V'$, $(W - K) \cap V \cap V'$ sont tous les trois des réunions de composantes connexes de $W - K$, on en déduit que $x_W = x'_W = y_W$ : tous les trois sont la même composante connexe $t_W$ de $W - K$ ; $t_W$ est une composante de $(W - K) \cap V \cap V'$ et la famille $t = (t_W)_{W \in \mathcal{E}}$ a pour image par $g$ : $g(t) = y$. Ceci termine la démonstration du lemme.
 
+Démontrons à présent l'inclusion $\mathcal{O}(U \cap U', V \cap V') \subset \mathcal{O}(U,V) \cap \mathcal{O}(U',V')$.
 
+Pour cela, soit $x$ un élément du premier membre~:
 
+Si $x \in V \cap V'$, il est clair par construction que $x$ est dans le second membre. Si $x \notin V \cap V'$, c'est que $x \in \pi'_{V \cap V'}(X, K; z)$ pour un certain $z \in K \cap U \cap U'$. Il est alors clair, d'après le lemme ci-dessus, que $x \in \pi'_V(X, K; z) \cap \pi'_{V'}(X, K; z)$ et donc $x \in \mathcal{O}(U,V) \cap \mathcal{O}(U',V')$.
+\vskip .3cm
+{\bf 5.3.2}. --- Démonstration de la propriété~: $\forall x \in K_0$, $\operatorname{Card} \pi(X_0, K_0; x) = 1$.
+\vskip .3cm
+Soit donc $x \in K_0$, on veut montrer que $\varprojlim_{W \in \mathcal{V}(x)} \pi_0(W - K_0)$ est réduite à un seul élément. Pour calculer cette limite projective, on peut se limiter aux $W$ qui sont des ouverts spéciaux (de la forme $\mathcal{O}(U,V)$) puisqu'ils forment un système cofinal de l'ensemble de tous les voisinages. De plus on va montrer qu'on peut se limiter aux $W$ qui sont de la forme $\mathcal{O}(U,V)$ où $V$ est une partie connexe de $U - K$. En effet ces derniers forment un système cofinal $\mathcal{F}$ : puisque $x$ est élément de $K_0$, il existe $z \in K$ tel que $x \in \varprojlim_{W \in \mathcal{V}(z)} \pi_0(W - K)$ et donc $x$ est une famille $(x_W)_{W \in \mathcal{V}(z)}$ où chaque $x_W$ est une composante connexe de $W - K$, avec~: $W \subset W' \implies x_W \subset x_{W'}$ ; Si $\mathcal{O}(U,V)$ est un voisinage de $x$, $V$ est une réunion de composantes de $U - K$ et parmi ces composantes il y en a une, $\check{V}$ qui contient tous les $x_W$ pour $W \in \mathcal{V}(z)$, $W \subset U$~: l'ouvert spécial $\mathcal{O}(U,\check{V})$ est alors un voisinage de $x$ contenu dans $\mathcal{O}(U,V)$.
 
+Il reste à vérifier que $\varprojlim_{W \in \mathcal{F}} \pi_0(W - K_0)$ est réduite à un élément, mais c'est évident puisque par construction, si $W \in \mathcal{F}$, $W = \mathcal{O}(U,\check{V})$ où $\check{V}$ est connexe, et $W - K_0 = \check{V}$ est lui-même connexe~: pour tout $W \in \mathcal{F}$, $\operatorname{Card} \pi_0(W - K_0)$ est égal à $1$.
+\vskip .3cm
+{\bf 5.3.3}. --- Construction de $f_0 : X_0 \to X$.
+\vskip .3cm
+On définit $f_0$ pour $x \in X_0 \setminus K_0$ par $f_0(x) = x$, (rappelons que $X_0 \setminus K_0 = X \setminus K$) et par conséquent $f_0 \mid_{X_0 \setminus K_0}$ est un homéomorphisme de $X_0 \setminus K_0$ sur $X \setminus K$.
 
+Si $x \in K_0$, il existe un $z$ unique, $z \in K$, tel que $x \in \pi(X, K; z)$, on pose $f_0(x) = z$.
+
+Il est donc clair que $f_0^{-1}(K) = K_0$. La continuité de $f_0$ en $x \in K_0$ provient du fait que, si $U$ est un ouvert de $X$ contenant $z = f_0(x)$, alors $f_0^{-1}(U)$ est égal à l'ouvert spécial $\mathcal{O}(U,U-K)$.
+\vskip .3cm
+{\bf 5.3.4}. --- $(X_0,f_0)$ est un objet final de $\mathcal{C}$~:
+\vskip .3cm
+Soit $(X',f')$ un objet de $\mathcal{C}$, il faut montrer qu'il existe un unique $\mathcal{C}$-morphisme $\varphi : (X',f') \to (X_0,f_0)$, ou encore, une unique application continue $\varphi : X' \to X_0$ rendant le diagramme suivant commutatif~:
 \[\begin{tikzcd}
 	{X'} && {X_0} \\
 	& X
@@ -287,16 +313,30 @@ et ce qu'on cherche à démontrer est conséquence immédiat de lemme~:
 	\arrow["{f'}"', from=1-1, to=2-2]
 	\arrow["{f_0}", from=1-3, to=2-2]
 \end{tikzcd}\]
+On va, tout d'abord, raisonner par conditions nécessaires, en supposant que $\varphi$ existe~:
 
-
-
-
+Soient $K' = {f'}^{-1}(K)$, $x' \in X'$ et $x = f'(x')$ ; la commutativité du diagramme implique $\varphi(x') \in f_0^{-1}(x)$.
+\begin{itemize}
+	\item[a)] si $x' \in X' \setminus K'$, comme $f_0^{-1}(x)$ est réduit à un élément (qui est $x$ lui même, car $X_0 \setminus K_0 = X \setminus K$), on doit avoir $\varphi(x') = x$.
+	\item[b)] si $x' \in K'$, on a $f_0^{-1}(x) = \pi(X,K;x)$. D'autre part, on sait que $\operatorname{Card} \pi(X',K';x') = 1$, ou encore que $\varprojlim_{W' \in \mathcal{V}(x')} \pi_0(W'-K')$ est réduit à un élément. Cet élément unique est une famille $(x'_{W'})_{W' \in \mathcal{V}(x')}$ de parties connexes de $X'$, chaque $x'_{W'}$ étant une composante de $W'-K'$.
+\end{itemize}
+Soit maintenant $W \in \mathcal{V}(x)$, alors (par continuité de $f'$ au point $x'$) l'ensemble $\mathcal{E}_W$ des $W' \in \mathcal{V}(x')$ tels que $f'(W') \subset W$ est non vide. Pour tout $W' \in \mathcal{E}_W$, $f'(x'_{W'})$ est une partie connexe de $X$ (image d'un connexe par une application continue) qui est donc contenue dans une composante connexe $x_W$ de $W-K$. La famille $x_0 = (x_W)_{W \in \mathcal{V}(x)}$ ainsi définie est un élément de $\varprojlim_{W \in \mathcal{V}(x)} \pi_0(W-K) = \pi(X,K;x) = f_0^{-1}(x)$. Montrons qu'on a nécessairement $\varphi(x') = x_0$. En effet~:
+\begin{itemize}
+	\item[1$^\circ$)] $x'$ est adhérent à tous les $x'_{W'}$ ($W' \in \mathcal{V}(x')$), donc (par continuité de $\varphi$ en $x'$), $\varphi(x')$ doit être adhérent à tous les $f'(x'_{W'})$, et donc à tous les $x_W$ (où $W \in \mathcal{V}(x)$) puisque $f'(x'_{W'}) \subset W$ (tout au moins lorsque $f'(W') \subset W$).
 \vskip .3cm
-{\bf 5.4}. ---
+	\item[2$^\circ$)] Or parmi les éléments de $\pi(X,K;x)$ (ensemble égal à $f_0^{-1}(x)$, auquel $\varphi(x)$ doit appartenir puisque $f_0 \circ \varphi = f'$) un seul (vu la topologie de $X_0$) est adhérent à tous les $x_W$ ($W \in \mathcal{V}(x)$), c'est $x_0 = (x_W)_{W \in \mathcal{V}(x)}$.
+\end{itemize}
+c) On vient de montrer en b) que, si $\varphi$ existe, alors pour tout $x' \in X'$, la valeur $\varphi(x')$ est imposée par les diverses conditions que doit vérifier $\varphi$. Ceci montre l'unicité de $\varphi$. D'autre part, son existence est assurée par les conditions b) qui permettent de le construire.
 
-
-
-
+Ceci achève la démonstration de 5.2.
+\vskip .3cm
+{\bf 5.4}. --- Découpe d'une surface à bord suivant un $1$-complexe plongé.
+\vskip .3cm
+{
+Théorème 5.4.1. --- \it Si $X$ est une surface à bord et $K$ un $1$-complexe compact contenu dans $\operatorname{int} X$, alors la découpe $\Sigma(X,K)$ de $X$ suivant $K$ est une surface à bord généralisé dont le bord généralisé est $p^{-1}(K \cup \partial X)$, où $p$ est la projection canonique $\Sigma(X,K) \to X$.
+}
+\vskip .3cm
+Remarques. --- Cet énoncé reste vrai si $X$ est une surface à bord généralisé (immédiat). D'autre part il résulte de la démonstration ci-dessous que si $X$ est compacte, alors $\Sigma(X,K)$ est compacte, et que si $X$ est orientée alors $\Sigma(X,K)$ est orientée par une orientation canoniquement déduite de celle de $X$. Enfin si $X$ est une surface à bord et $K$ sans points isolés, alors $\Sigma(X,K)$ est une surface à bord.
 \vskip .3cm
 \begin{minipage}{\linewidth}
     \centering
